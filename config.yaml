@@ -1,0 +1,14 @@
+# Logging configurations.
+logging:
+  # Critical, error, warning, info or debug.  Defaults to info.
+  level: debug
+  # Format for the log messages.
+  format: "%(asctime)s - %(message)s - %(levelname)s"
+  # Indicates whether logs should be displayed on the terminal.
+  include_terminal: True
+  # Log rotation frequency.  S-Seconds, M-Minutes, H-Hours, D-Day
+  rotation: D
+  # The number of rolled-over logs to keep prior to deletion.
+  backup_count: 100
+  # Location for the log files.
+  path: ./log
