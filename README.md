@@ -22,7 +22,7 @@ State machines provide a pattern for automating maintenance tasks that I have im
 * Easy to generalize--state machines are composable--just have one state machine invoke another.
 * Easy to parallelize--see line above.
 
-Additionally, the framework provides credential management functionality that makes it more convenient to use encrypted values than copy-and-paste, hard-coding clear-text does.  There is also convenient protection against clear-text credentials leaking into the log files.
+Additionally, the framework provides credential management functionality that makes it more convenient to use encrypted values than copy-and-paste hard-coded clear-text values.  There is also convenient protection against clear-text credentials leaking into the log files.
 
 Implementations follow an End Point<-->Service<-->Repository layering pattern that allows the important parts of the code to be executed in unit tests during development.  Exercising business logic with unit tests profoundly reduces the amount of time to create a script--no need to create a special test environment and wait for the database to be backed up to just to find out whether script is going to even reach the step where the backup is encrypted.  Yes, integration testing is important, but it doesn't have to be performed following every little edit you make to a script.
 
