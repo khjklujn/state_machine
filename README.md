@@ -1,7 +1,8 @@
 # state_machine
+
 Framework for safely implementing scripting hackiness in a production environment.
 
-Having found your way here, my first suggestion would be to check out whether [Airflow (https://airflow.apache.org/)] suits your needs better.  Long term, centralized management of Workflow Orchestration will be better than custom solutions.
+Having found your way here, my first suggestion would be to check out whether [Airflow](https://airflow.apache.org/) suits your needs better.  Long term, centralized management of Workflow Orchestration will be better than custom solutions.  Once it has been demonstrated that automation can be quickly and reliably generated, use cases proliferate.  It would behoove you to have something that facilitates keeping track of the automated tasks.
 
 One common problem I have encountered in complicated systems is a tendancy to automate maintenance tasks using scripting languages, and the implementations are almost always very naive:
 
