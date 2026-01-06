@@ -1,5 +1,5 @@
 # standard library
-from datetime import datetime
+from datetime import datetime, UTC
 import os
 from shutil import copy2, move
 from typing import Any, Callable
@@ -18,12 +18,12 @@ class FileManager(AbstractRepository):
         """
         Executes a file management operation.
         """
-        start_time = datetime.utcnow()
+        start_time = datetime.now(UTC)
         cls.logger.debug(f"  {function.__name__} {args} {kwargs} - Started")
 
         results = function(*args, **kwargs)
 
-        end_time = datetime.utcnow()
+        end_time = datetime.now(UTC)
         cls.logger.debug(
             f"  {function.__name__} {args} {kwargs} - Completed - Runtime: {end_time - start_time}"
         )

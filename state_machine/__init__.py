@@ -4,6 +4,7 @@ Framework for implementing result-patterned state-machines.
 
 from . import config
 from . import decorator
+from . import exception
 from .abstract_machine import AbstractMachine
 from .abstract_repository import AbstractRepository
 from .base_dependency import BaseDependency

@@ -1,5 +1,5 @@
 # standard library imports
-from datetime import datetime
+from datetime import datetime, UTC
 
 # third party imports
 from pydantic import BaseModel, Field, SecretStr

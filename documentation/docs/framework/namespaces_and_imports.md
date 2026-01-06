@@ -68,7 +68,7 @@ The import statements should always appear at the top of the module file.  Addit
 
 ```python linenums="1"
 # standard library imports
-from datetime import datetime
+from datetime import datetime, UTC
 
 # third party imports
 from joblib import delayed, Parallel

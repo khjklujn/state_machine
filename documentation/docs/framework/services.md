@@ -48,7 +48,7 @@ For the state-machine depicted above, the State object is defined as:
 
 ```python linenums="1"
 # standard library imports
-from datetime import datetime
+from datetime import datetime, UTC
 
 # third party imports
 from pydantic import Field
@@ -81,7 +81,7 @@ class StateBackupAndEncrypt(BaseState):
     postgresql_host: str = Field(frozen=True)
     """The PostgreSQL instance name that will be reported back in Failures."""
 
-    time_stamp: datetime = Field(default=datetime.utcnow(), frozen=True)
+    time_stamp: datetime = Field(default=datetime.now(UTC), frozen=True)
     """The time stamp used for building the dates in the paths.  Default to utc now."""
 ```
 

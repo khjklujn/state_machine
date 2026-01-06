@@ -90,6 +90,7 @@ for root, _, files in sorted(os.walk(root)):
                     file_out.write(f"# {title_split[-1]}\n")
                     file_out.write("\n")
                     file_out.write(f"::: {title}\n")
+                    print(f"  {title_split}")
                     if len(title_split) == 2:
                         category = ".".join(title_split[:1])
                         if category not in paths:

@@ -34,6 +34,9 @@ from long_term_storage.service.retention_end_of_year.eoy_delete import MachineEo
 from long_term_storage.service.retention_end_of_year.eoy_deletion_candidates import (
     MachineEoyDeletionCandidates,
 )
+from service.archive_encrypted.archive_encrypted_machine import (
+    MachineArchiveEncrypted,
+)
 from state_machine import AbstractMachine
 
 
@@ -110,6 +113,7 @@ machines = (
     MachineEomDeletionCandidates,
     MachineEoyDelete,
     MachineEoyDeletionCandidates,
+    MachineArchiveEncrypted,
 )
 
 root = "./documentation/docs/machine_diagrams"
