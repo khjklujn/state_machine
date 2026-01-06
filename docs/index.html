@@ -10,7 +10,7 @@
       
       
       
-        <link rel="next" href="design/sequence_diagrams/backup.html">
+        <link rel="next" href="framework/layers.html">
       
       
       <link rel="icon" href="assets/images/favicon.png">
@@ -70,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#file-archive" class="md-skip">
+        <a href="#state_machine" class="md-skip">
           Skip to content
         </a>
       
@@ -300,7 +300,7 @@
   
   
     <li class="md-nav__item">
-      <a href="design/sequence_diagrams/backup.html" class="md-nav__link">
+      <a href="design/sequence_diagrams/backup.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -322,7 +322,7 @@
   
   
     <li class="md-nav__item">
-      <a href="design/sequence_diagrams/restore.html" class="md-nav__link">
+      <a href="design/sequence_diagrams/restore.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3199,7 +3199,32 @@
 
 
 
-<h1 id="file-archive">File Archive<a class="headerlink" href="#file-archive" title="Permanent link">&para;</a></h1>
+<h1 id="state_machine">state_machine<a class="headerlink" href="#state_machine" title="Permanent link">&para;</a></h1>
+<p>Framework for safely implementing scripting hackiness in a production environment.</p>
+<p>Having found your way here, my first suggestion would be to check out whether <a href="https://airflow.apache.org/">Airflow</a> suits your needs better.  Long term, centralized management of Workflow Orchestration will be better than custom solutions.  Once it has been demonstrated that automation can be quickly and reliably generated, use cases proliferate.  It would behoove you to have something that facilitates keeping track of the automated tasks.</p>
+<p>One common problem I have encountered in complicated systems is a tendancy to automate maintenance tasks using scripting languages, and the implementations are almost always very naive:</p>
+<ul>
+<li>No thought is put into exception handling--they assume the happy-path will always be followed.</li>
+<li>Credentials are not protected--clear text passwords frequently found in code, configs, and logs.</li>
+<li>Inefficient and difficult to parallelize.</li>
+<li>Usually undocumented--it's often quicker the throw it away and start over from scratch than reverse engineer what somebody else built.</li>
+<li>Lack of rollback on failure--failures often leave the system in an undesirable state.</li>
+<li>Take an exceedingly long time to create--cannot separate testing of the business logic from end-to-end testing ("quick and dirty" isn't quick--it's just dirty).</li>
+<li>Ad hoc or no failure reporting--a huge problem in code that is intended to run without anybody paying attention to what it's doing.</li>
+</ul>
+<p>State machines provide a pattern for automating maintenance tasks that I have implemented frequently enough to justify creating a framework to simplify the process.  State machines have several advantages over happy-hacking my way through implementations:</p>
+<ul>
+<li>Easy to verify there is behavior defined for both the happy-path and all of the potential unhappy-paths.</li>
+<li>Easy to communicate what the automation is doing to stakeholders.</li>
+<li>Easy to identify insert points where modifications in the code need to be made.</li>
+<li>Easy to maintain the documentation--the diagrams are derived from the implementation.</li>
+<li>Easy to generalize--state machines are composable--just have one state machine invoke another.</li>
+<li>Easy to parallelize--see line above.</li>
+<li>Generalized pattern for implementing rollback on failure--idempotency.</li>
+</ul>
+<p>Additionally, the framework provides credential management functionality that makes it more convenient to use encrypted values than copy-and-paste hard-coded clear-text values.  There is also convenient protection against clear-text credentials leaking into the log files.</p>
+<p>Implementations follow an End Point&harr;Service&harr;Repository layering pattern that allows the important parts of the code to be executed in unit tests during development.  Exercising business logic with unit tests profoundly reduces the amount of time to create a script--no need to create a special test environment and wait for the database to be backed up to just to find out whether script is going to even reach the step where the backup is encrypted.  Yes, integration testing is important, but it doesn't have to be performed following every little edit you make to a script.</p>
+<p>Finally, the Results pattern has been built into the framework to provide consistent failure reporting and prevents the situation where a failure prevents the processing potential successes.</p>
 
 
 
