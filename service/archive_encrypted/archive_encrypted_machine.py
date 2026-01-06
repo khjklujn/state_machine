@@ -2,7 +2,7 @@
 import os
 
 # application imports
-from state_machine.decorator import handle_exceptions, machine, node
+from state_machine.decorator import handle_exceptions, machine, node, no_exceptions
 from state_machine import AbstractMachine, Transition
 
 # local imports
@@ -252,13 +252,10 @@ class MachineArchiveEncrypted(AbstractMachine):
 
         return self.success(exit_to=self.remove_copied_file)
 
-    @handle_exceptions(on_exception="report_results")
-    @node
-    def report_results(self) -> Transition:
-        """
-        overview:
-            Report the Success/Failure outcomes.
+    @property
+    def failure_prefix(self) -> str:
+        return "MachineArchiveEncrypted"
 
-        is_terminal: True
-        """
-        return self.success(exit_to=self.exit)
+    @property
+    def state(self) -> StateArchiveEncrypted:
+        return self._state  # pyright: ignore

@@ -10,7 +10,7 @@ One common problem I have encountered in complicated systems is a tendancy to au
 * Credentials are not protected--clear text passwords frequently found in code, configs, and logs.
 * Inefficient and difficult to parallelize.
 * Usually undocumented--it's often quicker the throw it away and start over from scratch than reverse engineer what somebody else built.
-* Lack of idempotence--failures often leave the system in an undesirable state.
+* Lack of rollback on failure--failures often leave the system in an undesirable state.
 * Take an exceedingly long time to create--cannot separate testing of the business logic from end-to-end testing ("quick and dirty" isn't quick--it's just dirty).
 * Ad hoc or no failure reporting--a huge problem in code that is intended to run without anybody paying attention to what it's doing.
 
@@ -22,6 +22,7 @@ State machines provide a pattern for automating maintenance tasks that I have im
 * Easy to maintain the documentation--the diagrams are derived from the implementation.
 * Easy to generalize--state machines are composable--just have one state machine invoke another.
 * Easy to parallelize--see line above.
+* Generalized pattern for implementing rollback on failure--idempotency.
 
 Additionally, the framework provides credential management functionality that makes it more convenient to use encrypted values than copy-and-paste hard-coded clear-text values.  There is also convenient protection against clear-text credentials leaking into the log files.
 
