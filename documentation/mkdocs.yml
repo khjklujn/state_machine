@@ -64,6 +64,8 @@ nav:
     service:
     - archive_encrypted:
       - archive_encrypted_machine: source_code/service/archive_encrypted/archive_encrypted_machine.md
+      - dependency_archive_encrypted: source_code/service/archive_encrypted/dependency_archive_encrypted.md
+      - state_archive_encrypted: source_code/service/archive_encrypted/state_archive_encrypted.md
     secret:
     - generate_key: source_code/secret/generate_key.md
     - set: source_code/secret/set.md
@@ -93,6 +95,9 @@ nav:
     tests:
       mocks:
       - mock_logger: source_code/tests/mocks/mock_logger.md
+      service:
+      - archive_encrypted:
+        - test_archive_encrypted_machine: source_code/tests/service/archive_encrypted/test_archive_encrypted_machine.md
       test_state_machine:
       - decorator:
         - test_machine: source_code/tests/test_state_machine/decorator/test_machine.md
