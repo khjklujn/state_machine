@@ -1,5 +1,5 @@
 # standard library imports
-from datetime import datetime
+from datetime import datetime, UTC
 from typing import Callable
 
 # third party imports
@@ -21,12 +21,12 @@ class Gpg(AbstractRepository):
     @classmethod
     def execute(cls, function: Callable, *args, **kwargs):
         """Executes the gpg action."""
-        start_time = datetime.utcnow()
+        start_time = datetime.now(UTC)
         cls.logger.debug(f"  {function.__name__} - Started")
 
         results = function(*args, **kwargs)
 
-        end_time = datetime.utcnow()
+        end_time = datetime.now(UTC)
         cls.logger.debug(
             f"  {function.__name__} - Completed - Runtime: {end_time - start_time}"
         )

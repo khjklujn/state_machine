@@ -1,5 +1,5 @@
 # standard library imports
-from datetime import datetime
+from datetime import datetime, UTC
 from os import environ, _Environ
 import subprocess
 from typing import Optional
@@ -31,7 +31,7 @@ class Command(AbstractRepository):
         raises:
             Exception: If exit code is not zero.
         """
-        start_time = datetime.utcnow()
+        start_time = datetime.now(UTC)
         cls.logger.debug(f"  {command} - Started")
 
         result = subprocess.run(
@@ -44,7 +44,7 @@ class Command(AbstractRepository):
             input=input,
         )
 
-        end_time = datetime.utcnow()
+        end_time = datetime.now(UTC)
         if result.returncode != 0:
             cls.logger.debug(
                 f"  {command} - Error: {result.returncode} - Runtime: {end_time - start_time}"

@@ -1,5 +1,5 @@
 # standard library imports
-from datetime import datetime
+from datetime import datetime, UTC
 from getpass import getpass
 import sys
 from typing import Any, Callable
@@ -15,12 +15,12 @@ class Process(AbstractRepository):
 
     @classmethod
     def execute(cls, function: Callable, *args, **kwargs) -> Any:
-        start_time = datetime.utcnow()
+        start_time = datetime.now(UTC)
         cls.logger.debug(f"  {cls.__name__} - Started")
 
         result = function(*args, **kwargs)
 
-        end_time = datetime.utcnow()
+        end_time = datetime.now(UTC)
         cls.logger.debug(
             f"  {cls.__name__} - Completed - Runtime: {end_time - start_time}"
         )

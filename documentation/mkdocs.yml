@@ -8,7 +8,8 @@ nav:
   - Sequence Diagrams:
     - Backups: design/sequence_diagrams/backup.md
     - Restore: design/sequence_diagrams/restore.md
-  - Machine Diagrams:
+  # - Machine Diagrams:
+
 - Framework:
   - Layers: framework/layers.md
   - Navigating Object Orientation: framework/navigating_object_orientation.md
@@ -25,53 +26,89 @@ nav:
   - Generate Key: secret/generate_key.md
   - Set: secret/set.md
 - Source Code:
+    end_point:
+    - dynamic_mounting_end_point: source_code/end_point/dynamic_mounting_end_point.md
+    - dependency_end_point: source_code/end_point/dependency_end_point.md
+    - end_point: source_code/end_point/end_point.md
+    model:
+      connection:
+      - key_vault:
+        - service_principal: source_code/model/connection/key_vault/service_principal.md
+      - postgresql:
+        - az_cli: source_code/model/connection/postgresql/az_cli.md
+        - user: source_code/model/connection/postgresql/user.md
+        - service_principal: source_code/model/connection/postgresql/service_principal.md
+    repository:
+      file_manager:
+      - file_manager: source_code/repository/file_manager/file_manager.md
+      gpg:
+      - gpg: source_code/repository/gpg/gpg.md
+      - gpg_key_model: source_code/repository/gpg/gpg_key_model.md
+      key_vault:
+      - restore_config_model: source_code/repository/key_vault/restore_config_model.md
+      - restore_config: source_code/repository/key_vault/restore_config.md
+      - backup_config_model: source_code/repository/key_vault/backup_config_model.md
+      - key_vault: source_code/repository/key_vault/key_vault.md
+      - backup_config: source_code/repository/key_vault/backup_config.md
+      process:
+      - process: source_code/repository/process/process.md
+      shell:
+      - file_system: source_code/repository/shell/file_system.md
+      - tar: source_code/repository/shell/tar.md
+      - pg_dump: source_code/repository/shell/pg_dump.md
+      - command: source_code/repository/shell/command.md
+      - psql: source_code/repository/shell/psql.md
+      - az:
+        - storage_account: source_code/repository/shell/az/storage_account.md
+        - ad: source_code/repository/shell/az/ad.md
+        - keyvault: source_code/repository/shell/az/keyvault.md
+        - az: source_code/repository/shell/az/az.md
+      - delimited:
+        - comma_delimited: source_code/repository/shell/delimited/comma_delimited.md
+        - equal_delimited: source_code/repository/shell/delimited/equal_delimited.md
+        - space_delimited: source_code/repository/shell/delimited/space_delimited.md
+    service:
+    - archive_encrypted:
+      - archive_encrypted_machine: source_code/service/archive_encrypted/archive_encrypted_machine.md
     secret:
     - generate_key: source_code/secret/generate_key.md
     - set: source_code/secret/set.md
     state_machine:
-    - base_state: source_code/state_machine/base_state.md
-    - abstract_repository: source_code/state_machine/abstract_repository.md
     - logger_model: source_code/state_machine/logger_model.md
-    - result: source_code/state_machine/result.md
     - base_dependency: source_code/state_machine/base_dependency.md
     - abstract_machine: source_code/state_machine/abstract_machine.md
     - logger: source_code/state_machine/logger.md
+    - base_state: source_code/state_machine/base_state.md
+    - result: source_code/state_machine/result.md
     - transition: source_code/state_machine/transition.md
+    - abstract_repository: source_code/state_machine/abstract_repository.md
     state_machine.config:
-    - secrets: source_code/state_machine/config/secrets.md
+    - encryption: source_code/state_machine/config/encryption.md
     - attribute_dict: source_code/state_machine/config/attribute_dict.md
     - encrypted_attribute_dict: source_code/state_machine/config/encrypted_attribute_dict.md
     - config: source_code/state_machine/config/config.md
-    - encryption: source_code/state_machine/config/encryption.md
+    - secrets: source_code/state_machine/config/secrets.md
     state_machine.decorator:
     - handle_exceptions: source_code/state_machine/decorator/handle_exceptions.md
-    - no_exceptions: source_code/state_machine/decorator/no_exceptions.md
-    - node: source_code/state_machine/decorator/node.md
     - machine: source_code/state_machine/decorator/machine.md
+    - node: source_code/state_machine/decorator/node.md
+    - no_exceptions: source_code/state_machine/decorator/no_exceptions.md
     state_machine.exception:
-    - documentation: source_code/state_machine/exception/documentation.md
     - machine: source_code/state_machine/exception/machine.md
+    - documentation: source_code/state_machine/exception/documentation.md
     tests:
       mocks:
-      - mock_file_manager: source_code/tests/mocks/mock_file_manager.md
-      - mock_invoked_machine: source_code/tests/mocks/mock_invoked_machine.md
-      - mock_restore_config_model: source_code/tests/mocks/mock_restore_config_model.md
-      - mock_file_system: source_code/tests/mocks/mock_file_system.md
-      - mock_az: source_code/tests/mocks/mock_az.md
-      - mock_basic: source_code/tests/mocks/mock_basic.md
       - mock_logger: source_code/tests/mocks/mock_logger.md
-      - mock_backup_config_model: source_code/tests/mocks/mock_backup_config_model.md
-      - mock_postgresql: source_code/tests/mocks/mock_postgresql.md
       test_state_machine:
       - decorator:
-        - test_node: source_code/tests/test_state_machine/decorator/test_node.md
-        - test_handle_exceptions: source_code/tests/test_state_machine/decorator/test_handle_exceptions.md
         - test_machine: source_code/tests/test_state_machine/decorator/test_machine.md
+        - test_handle_exceptions: source_code/tests/test_state_machine/decorator/test_handle_exceptions.md
+        - test_node: source_code/tests/test_state_machine/decorator/test_node.md
       - machine:
-        - test_no_transition: source_code/tests/test_state_machine/machine/test_no_transition.md
-        - test_failure_down_happy_path: source_code/tests/test_state_machine/machine/test_failure_down_happy_path.md
-        - test_happy_path: source_code/tests/test_state_machine/machine/test_happy_path.md
         - test_illegal_transition: source_code/tests/test_state_machine/machine/test_illegal_transition.md
+        - test_failure_down_happy_path: source_code/tests/test_state_machine/machine/test_failure_down_happy_path.md
+        - test_no_transition: source_code/tests/test_state_machine/machine/test_no_transition.md
+        - test_happy_path: source_code/tests/test_state_machine/machine/test_happy_path.md
         - test_success_down_unhappy_path: source_code/tests/test_state_machine/machine/test_success_down_unhappy_path.md
 theme:
   name: material

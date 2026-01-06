@@ -1,0 +1,3 @@
+# psql
+
+::: repository.shell.psql

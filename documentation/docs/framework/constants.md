@@ -68,7 +68,7 @@ Looking at an example of where they are used:
 
 ```python linenums="1"
 # standard library imports
-from datetime import datetime
+from datetime import datetime, UTC
 
 # third party imports
 from azure.keyvault.secrets import SecretClient
@@ -89,7 +89,7 @@ class BackupConfig(AbstractRepository):
         self.client = client
 
     def execute(self, *, secret_name: str) -> str:
-        start_time = datetime.utcnow()
+        start_time = datetime.now(UTC)
         self.logger.debug(
             f"  key vault secret {secret_name} from {self.client.vault_url} - Started"
         )
@@ -98,7 +98,7 @@ class BackupConfig(AbstractRepository):
         if value is None:
             raise Exception(f"{secret_name} not defined in key vault")
 
-        end_time = datetime.utcnow()
+        end_time = datetime.now(UTC)
         self.logger.debug(
             f"  key vault secret {secret_name} from {self.client.vault_url} - Completed - Runtime: {end_time - start_time}"
         )

@@ -314,7 +314,7 @@ We see the function defining the test takes a single parameter: monkeypatch.  mo
 
 In this case, the provided context is "patch".
 
-"monkeypatch" provides the dependency injection functionality.  Within the monkeypatch context, "patched" items will use the alternative behavior when the test is executed.  The reason for doing it this way is to isolate the dependency injection to just the code being tested.  Say we had a situation where the code is using the datetime.utcnow() function to get the current time, but we needed to the test to always take place at a fixed point in time, so we override the behavior of utctime to return a fixed time.  Doing that outside of a monkeypatch context would interfere with the test framework, which also needs to be able use datetime.utcnow() to determine what time it is.
+"monkeypatch" provides the dependency injection functionality.  Within the monkeypatch context, "patched" items will use the alternative behavior when the test is executed.  The reason for doing it this way is to isolate the dependency injection to just the code being tested.  Say we had a situation where the code is using the datetime.now(UTC) function to get the current time, but we needed to the test to always take place at a fixed point in time, so we override the behavior of utctime to return a fixed time.  Doing that outside of a monkeypatch context would interfere with the test framework, which also needs to be able use datetime.now(UTC) to determine what time it is.
 
 Moving on to the dependency injection:
 

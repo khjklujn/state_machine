@@ -1,0 +1,3 @@
+# gpg
+
+::: repository.gpg.gpg

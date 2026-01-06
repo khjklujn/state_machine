@@ -1,5 +1,5 @@
 # standard library imports
-from datetime import datetime
+from datetime import datetime, UTC
 import inspect
 from traceback import format_exc
 from typing import Callable
@@ -145,7 +145,7 @@ class AbstractMachine:
             IllegalTransition: If a Failure result is sent down a happy-path.
             IllegalTransition: If no transition is provided and the node is not a terminal-node.
         """
-        machine_start_time = datetime.utcnow()
+        machine_start_time = datetime.now(UTC)
         self.logger.info(f"{self.__class__.__name__.split('.')[-1]} started")
 
         # Set the first node to be executed.
@@ -157,13 +157,13 @@ class AbstractMachine:
             previous_node = self._current_node
 
             # Execute the current node.
-            node_start_time = datetime.utcnow()
+            node_start_time = datetime.now(UTC)
             self.logger.debug(
                 f"{self.__class__.__name__.split('.')[-1]}.{self._current_node.__node_name__} started"
             )
             transition = self._current_node()
             self.logger.debug(
-                f"{self.__class__.__name__.split('.')[-1]}.{self._current_node.__node_name__} completed runtime: {datetime.utcnow() - node_start_time}"
+                f"{self.__class__.__name__.split('.')[-1]}.{self._current_node.__node_name__} completed runtime: {datetime.now(UTC) - node_start_time}"
             )
 
             # Confirm the node returned a Transition.
@@ -220,7 +220,7 @@ class AbstractMachine:
 
             self.results.append(transition.result)
 
-        machine_end_time = datetime.utcnow()
+        machine_end_time = datetime.now(UTC)
         machine_run_time = machine_end_time - machine_start_time
         self.logger.info(
             f"{self.__class__.__name__.split('.')[-1]} completed runtime: {machine_run_time}"

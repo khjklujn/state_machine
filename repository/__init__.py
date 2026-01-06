@@ -4,8 +4,6 @@ that either have side-effects or raise exceptions that would prevent them from b
 unit tested.
 """
 
-from .client_logger import ClientLogger
-
 from . import file_manager
 from . import postgresql
 from . import process
