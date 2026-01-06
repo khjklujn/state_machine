@@ -136,7 +136,7 @@ def test_copy_to_staging_failure(monkeypatch):
         machine = create_machine()
         results = machine.execute()
 
-        assert len(results) == 3
+        assert len(results) == 4
         assert isinstance(results[0], Success)
         assert results[0].node == "MachineArchiveEncrypted.ensure_staging_directory"
         assert isinstance(results[1], Failure)

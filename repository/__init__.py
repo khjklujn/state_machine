@@ -5,6 +5,6 @@ unit tested.
 """
 
 from . import file_manager
-from . import postgresql
+# from . import postgresql
 from . import process
 from . import shell
