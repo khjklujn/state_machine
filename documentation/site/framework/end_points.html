@@ -1,0 +1,4077 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="services.html">
+      
+      
+        <link rel="next" href="constants.html">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.6.3">
+    
+    
+      
+        <title>End Points - File Archive</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.d7758b05.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/_mkdocstrings.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="purple" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#end-points" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../index.html" title="File Archive" class="md-header__button md-logo" aria-label="File Archive" data-md-component="logo">
+      
+  <img src="../logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            File Archive
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              End Points
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../index.html" title="File Archive" class="md-nav__button md-logo" aria-label="File Archive" data-md-component="logo">
+      
+  <img src="../logo.png" alt="logo">
+
+    </a>
+    File Archive
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Design
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Design
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Sequence Diagrams
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            Sequence Diagrams
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../design/sequence_diagrams/backup.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Backups
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../design/sequence_diagrams/restore.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Restore
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Framework
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Framework
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="layers.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Layers
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="navigating_object_orientation.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Navigating Object Orientation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="namespaces_and_imports.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Namespaces and Imports
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="command_line_construction.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Command Line Construction
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="repositories.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Repositories
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="dependency_injection.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dependency Injection
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="services.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Services
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="end_points.html" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    End Points
+    
+  </span>
+  
+
+      </a>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="constants.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Constants
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="tests.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tests
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Secret
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Secret
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../secret/config_secrets.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Config Secrets
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../secret/generate_key.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Generate Key
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../secret/set.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Set
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Source Code
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Source Code
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_1" id="__nav_5_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    end_point
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_1">
+            <span class="md-nav__icon md-icon"></span>
+            end_point
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../source_code/end_point/dynamic_mounting_end_point.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    dynamic_mounting_end_point
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../source_code/end_point/dependency_end_point.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    dependency_end_point
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../source_code/end_point/end_point.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    end_point
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    model
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            model
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_2_1" id="__nav_5_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    connection
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            connection
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2_1_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_2_1_1" id="__nav_5_2_1_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    key_vault
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_5_2_1_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_2_1_1">
+            <span class="md-nav__icon md-icon"></span>
+            key_vault
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../source_code/model/connection/key_vault/service_principal.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    service_principal
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2_1_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_2_1_2" id="__nav_5_2_1_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    postgresql
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_5_2_1_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_2_1_2">
+            <span class="md-nav__icon md-icon"></span>
+            postgresql
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../source_code/model/connection/postgresql/az_cli.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    az_cli
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../source_code/model/connection/postgresql/user.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    user
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../source_code/model/connection/postgresql/service_principal.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    service_principal
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    repository
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_3">
+            <span class="md-nav__icon md-icon"></span>
+            repository
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_3_1" id="__nav_5_3_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    file_manager
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            file_manager
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../source_code/repository/file_manager/file_manager.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    file_manager
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_3_2" id="__nav_5_3_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    gpg
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            gpg
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../source_code/repository/gpg/gpg.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    gpg
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../source_code/repository/gpg/gpg_key_model.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    gpg_key_model
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_3_3" id="__nav_5_3_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    key_vault
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            key_vault
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../source_code/repository/key_vault/restore_config_model.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    restore_config_model
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../source_code/repository/key_vault/restore_config.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    restore_config
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../source_code/repository/key_vault/backup_config_model.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    backup_config_model
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../source_code/repository/key_vault/key_vault.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    key_vault
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../source_code/repository/key_vault/backup_config.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    backup_config
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_3_4" id="__nav_5_3_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    process
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            process
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../source_code/repository/process/process.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    process
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_3_5" id="__nav_5_3_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    shell
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_3_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_3_5">
+            <span class="md-nav__icon md-icon"></span>
+            shell
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../source_code/repository/shell/file_system.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    file_system
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../source_code/repository/shell/tar.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    tar
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../source_code/repository/shell/pg_dump.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    pg_dump
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../source_code/repository/shell/command.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    command
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../source_code/repository/shell/psql.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    psql
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3_5_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_3_5_6" id="__nav_5_3_5_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    az
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_5_3_5_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_3_5_6">
+            <span class="md-nav__icon md-icon"></span>
+            az
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../source_code/repository/shell/az/storage_account.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    storage_account
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../source_code/repository/shell/az/ad.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ad
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../source_code/repository/shell/az/keyvault.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    keyvault
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../source_code/repository/shell/az/az.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    az
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3_5_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_3_5_7" id="__nav_5_3_5_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    delimited
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_5_3_5_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_3_5_7">
+            <span class="md-nav__icon md-icon"></span>
+            delimited
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../source_code/repository/shell/delimited/comma_delimited.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    comma_delimited
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../source_code/repository/shell/delimited/equal_delimited.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    equal_delimited
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../source_code/repository/shell/delimited/space_delimited.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    space_delimited
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_4" id="__nav_5_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    service
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_4">
+            <span class="md-nav__icon md-icon"></span>
+            service
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_4_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_4_1" id="__nav_5_4_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    archive_encrypted
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_4_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            archive_encrypted
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../source_code/service/archive_encrypted/archive_encrypted_machine.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    archive_encrypted_machine
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_5" id="__nav_5_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    secret
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_5">
+            <span class="md-nav__icon md-icon"></span>
+            secret
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../source_code/secret/generate_key.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    generate_key
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../source_code/secret/set.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    set
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_6" id="__nav_5_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    state_machine
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_6">
+            <span class="md-nav__icon md-icon"></span>
+            state_machine
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../source_code/state_machine/logger_model.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    logger_model
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../source_code/state_machine/base_dependency.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    base_dependency
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../source_code/state_machine/abstract_machine.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    abstract_machine
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../source_code/state_machine/logger.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    logger
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../source_code/state_machine/base_state.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    base_state
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../source_code/state_machine/result.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    result
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../source_code/state_machine/transition.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    transition
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../source_code/state_machine/abstract_repository.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    abstract_repository
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_7" id="__nav_5_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    state_machine.config
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_7">
+            <span class="md-nav__icon md-icon"></span>
+            state_machine.config
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../source_code/state_machine/config/encryption.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    encryption
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../source_code/state_machine/config/attribute_dict.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    attribute_dict
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../source_code/state_machine/config/encrypted_attribute_dict.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    encrypted_attribute_dict
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../source_code/state_machine/config/config.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    config
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../source_code/state_machine/config/secrets.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    secrets
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_8" id="__nav_5_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    state_machine.decorator
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_8">
+            <span class="md-nav__icon md-icon"></span>
+            state_machine.decorator
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../source_code/state_machine/decorator/handle_exceptions.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    handle_exceptions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../source_code/state_machine/decorator/machine.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    machine
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../source_code/state_machine/decorator/node.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    node
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../source_code/state_machine/decorator/no_exceptions.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    no_exceptions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_9" id="__nav_5_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    state_machine.exception
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_9">
+            <span class="md-nav__icon md-icon"></span>
+            state_machine.exception
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../source_code/state_machine/exception/machine.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    machine
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../source_code/state_machine/exception/documentation.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    documentation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_10" id="__nav_5_10_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    tests
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_10">
+            <span class="md-nav__icon md-icon"></span>
+            tests
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_10_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_10_1" id="__nav_5_10_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    mocks
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_10_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_10_1">
+            <span class="md-nav__icon md-icon"></span>
+            mocks
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../source_code/tests/mocks/mock_logger.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    mock_logger
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_10_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_10_2" id="__nav_5_10_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    test_state_machine
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_10_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_10_2">
+            <span class="md-nav__icon md-icon"></span>
+            test_state_machine
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_10_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_10_2_1" id="__nav_5_10_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    decorator
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_5_10_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_10_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            decorator
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../source_code/tests/test_state_machine/decorator/test_machine.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    test_machine
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../source_code/tests/test_state_machine/decorator/test_handle_exceptions.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    test_handle_exceptions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../source_code/tests/test_state_machine/decorator/test_node.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    test_node
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_10_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_10_2_2" id="__nav_5_10_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    machine
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_5_10_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_10_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            machine
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../source_code/tests/test_state_machine/machine/test_illegal_transition.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    test_illegal_transition
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../source_code/tests/test_state_machine/machine/test_failure_down_happy_path.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    test_failure_down_happy_path
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../source_code/tests/test_state_machine/machine/test_no_transition.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    test_no_transition
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../source_code/tests/test_state_machine/machine/test_happy_path.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    test_happy_path
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../source_code/tests/test_state_machine/machine/test_success_down_unhappy_path.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    test_success_down_unhappy_path
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="end-points">End Points<a class="headerlink" href="#end-points" title="Permanent link">&para;</a></h1>
+<p>End-points are responsible for invoking the system behavior.</p>
+<p>There are two classes defined for processing end-point behavior.  The first defines a class called EndPoint.</p>
+<div class="language-python highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-0-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-0-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-0-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-0-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-0-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-0-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-0-10">10</a></span>
+<span class="normal"><a href="#__codelineno-0-11">11</a></span>
+<span class="normal"><a href="#__codelineno-0-12">12</a></span>
+<span class="normal"><a href="#__codelineno-0-13">13</a></span>
+<span class="normal"><a href="#__codelineno-0-14">14</a></span>
+<span class="normal"><a href="#__codelineno-0-15">15</a></span>
+<span class="normal"><a href="#__codelineno-0-16">16</a></span>
+<span class="normal"><a href="#__codelineno-0-17">17</a></span>
+<span class="normal"><a href="#__codelineno-0-18">18</a></span>
+<span class="normal"><a href="#__codelineno-0-19">19</a></span>
+<span class="normal"><a href="#__codelineno-0-20">20</a></span>
+<span class="normal"><a href="#__codelineno-0-21">21</a></span>
+<span class="normal"><a href="#__codelineno-0-22">22</a></span>
+<span class="normal"><a href="#__codelineno-0-23">23</a></span>
+<span class="normal"><a href="#__codelineno-0-24">24</a></span>
+<span class="normal"><a href="#__codelineno-0-25">25</a></span>
+<span class="normal"><a href="#__codelineno-0-26">26</a></span>
+<span class="normal"><a href="#__codelineno-0-27">27</a></span>
+<span class="normal"><a href="#__codelineno-0-28">28</a></span>
+<span class="normal"><a href="#__codelineno-0-29">29</a></span>
+<span class="normal"><a href="#__codelineno-0-30">30</a></span>
+<span class="normal"><a href="#__codelineno-0-31">31</a></span>
+<span class="normal"><a href="#__codelineno-0-32">32</a></span>
+<span class="normal"><a href="#__codelineno-0-33">33</a></span>
+<span class="normal"><a href="#__codelineno-0-34">34</a></span>
+<span class="normal"><a href="#__codelineno-0-35">35</a></span>
+<span class="normal"><a href="#__codelineno-0-36">36</a></span>
+<span class="normal"><a href="#__codelineno-0-37">37</a></span>
+<span class="normal"><a href="#__codelineno-0-38">38</a></span>
+<span class="normal"><a href="#__codelineno-0-39">39</a></span>
+<span class="normal"><a href="#__codelineno-0-40">40</a></span>
+<span class="normal"><a href="#__codelineno-0-41">41</a></span>
+<span class="normal"><a href="#__codelineno-0-42">42</a></span>
+<span class="normal"><a href="#__codelineno-0-43">43</a></span>
+<span class="normal"><a href="#__codelineno-0-44">44</a></span>
+<span class="normal"><a href="#__codelineno-0-45">45</a></span>
+<span class="normal"><a href="#__codelineno-0-46">46</a></span>
+<span class="normal"><a href="#__codelineno-0-47">47</a></span>
+<span class="normal"><a href="#__codelineno-0-48">48</a></span>
+<span class="normal"><a href="#__codelineno-0-49">49</a></span>
+<span class="normal"><a href="#__codelineno-0-50">50</a></span>
+<span class="normal"><a href="#__codelineno-0-51">51</a></span>
+<span class="normal"><a href="#__codelineno-0-52">52</a></span>
+<span class="normal"><a href="#__codelineno-0-53">53</a></span>
+<span class="normal"><a href="#__codelineno-0-54">54</a></span>
+<span class="normal"><a href="#__codelineno-0-55">55</a></span>
+<span class="normal"><a href="#__codelineno-0-56">56</a></span>
+<span class="normal"><a href="#__codelineno-0-57">57</a></span>
+<span class="normal"><a href="#__codelineno-0-58">58</a></span>
+<span class="normal"><a href="#__codelineno-0-59">59</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="c1"># standard library imports</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="kn">from</span><span class="w"> </span><span class="nn">traceback</span><span class="w"> </span><span class="kn">import</span> <span class="n">format_exc</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="c1"># application imports</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="kn">from</span><span class="w"> </span><span class="nn">state_machine</span><span class="w"> </span><span class="kn">import</span> <span class="n">Logger</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="kn">from</span><span class="w"> </span><span class="nn">state_machine</span><span class="w"> </span><span class="kn">import</span> <span class="n">Failure</span><span class="p">,</span> <span class="n">AbstractMachine</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7"></a>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="c1"># local imports</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="kn">from</span><span class="w"> </span><span class="nn">.dependency_end_point</span><span class="w"> </span><span class="kn">import</span> <span class="n">DependencyEndPoint</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10"></a>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11"></a>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="k">class</span><span class="w"> </span><span class="nc">EndPoint</span><span class="p">:</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="sd">    Wrapper around a state machine to execute the machine and report failures to stdout.</span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15"></a><span class="sd">    &quot;&quot;&quot;</span>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16"></a>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17"></a>    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span>
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18"></a>        <span class="bp">self</span><span class="p">,</span>
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19"></a>        <span class="o">*</span><span class="p">,</span>
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20"></a>        <span class="n">logger</span><span class="p">:</span> <span class="n">Logger</span><span class="p">,</span>
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21"></a>        <span class="n">machine</span><span class="p">:</span> <span class="n">AbstractMachine</span><span class="p">,</span>
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22"></a>    <span class="p">):</span>
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">_logger</span> <span class="o">=</span> <span class="n">logger</span>
+</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">_machine</span> <span class="o">=</span> <span class="n">machine</span>
+</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25"></a>
+</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26"></a>    <span class="k">def</span><span class="w"> </span><span class="nf">execute</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27"></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+</span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28"></a><span class="sd">        Executes the machine, filters any failures, reports failures on stdout, and exits with the status of the number of failures.</span>
+</span><span id="__span-0-29"><a id="__codelineno-0-29" name="__codelineno-0-29"></a><span class="sd">        &quot;&quot;&quot;</span>
+</span><span id="__span-0-30"><a id="__codelineno-0-30" name="__codelineno-0-30"></a>        <span class="k">try</span><span class="p">:</span>
+</span><span id="__span-0-31"><a id="__codelineno-0-31" name="__codelineno-0-31"></a>            <span class="bp">self</span><span class="o">.</span><span class="n">_results</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">machine</span><span class="o">.</span><span class="n">execute</span><span class="p">()</span>
+</span><span id="__span-0-32"><a id="__codelineno-0-32" name="__codelineno-0-32"></a>
+</span><span id="__span-0-33"><a id="__codelineno-0-33" name="__codelineno-0-33"></a>            <span class="bp">self</span><span class="o">.</span><span class="n">_failures</span> <span class="o">=</span> <span class="p">[</span>
+</span><span id="__span-0-34"><a id="__codelineno-0-34" name="__codelineno-0-34"></a>                <span class="n">result</span> <span class="k">for</span> <span class="n">result</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_results</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="n">Failure</span><span class="p">)</span>
+</span><span id="__span-0-35"><a id="__codelineno-0-35" name="__codelineno-0-35"></a>            <span class="p">]</span>
+</span><span id="__span-0-36"><a id="__codelineno-0-36" name="__codelineno-0-36"></a>
+</span><span id="__span-0-37"><a id="__codelineno-0-37" name="__codelineno-0-37"></a>            <span class="k">for</span> <span class="n">failure</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_failures</span><span class="p">:</span>
+</span><span id="__span-0-38"><a id="__codelineno-0-38" name="__codelineno-0-38"></a>                <span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Failure: </span><span class="si">{</span><span class="n">failure</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span><span id="__span-0-39"><a id="__codelineno-0-39" name="__codelineno-0-39"></a>                <span class="n">DependencyEndPoint</span><span class="p">(</span><span class="n">logger</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="p">)</span><span class="o">.</span><span class="n">execute_write_to_stdout</span><span class="p">(</span>
+</span><span id="__span-0-40"><a id="__codelineno-0-40" name="__codelineno-0-40"></a>                    <span class="n">content</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;Failure: </span><span class="si">{</span><span class="n">failure</span><span class="si">}</span><span class="s2">&quot;</span>
+</span><span id="__span-0-41"><a id="__codelineno-0-41" name="__codelineno-0-41"></a>                <span class="p">)</span>
+</span><span id="__span-0-42"><a id="__codelineno-0-42" name="__codelineno-0-42"></a>
+</span><span id="__span-0-43"><a id="__codelineno-0-43" name="__codelineno-0-43"></a>            <span class="n">DependencyEndPoint</span><span class="p">(</span><span class="n">logger</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="p">)</span><span class="o">.</span><span class="n">execute_exit</span><span class="p">(</span>
+</span><span id="__span-0-44"><a id="__codelineno-0-44" name="__codelineno-0-44"></a>                <span class="n">result</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_failures</span><span class="p">)</span>
+</span><span id="__span-0-45"><a id="__codelineno-0-45" name="__codelineno-0-45"></a>            <span class="p">)</span>
+</span><span id="__span-0-46"><a id="__codelineno-0-46" name="__codelineno-0-46"></a>        <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">exception</span><span class="p">:</span>
+</span><span id="__span-0-47"><a id="__codelineno-0-47" name="__codelineno-0-47"></a>            <span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">critical</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Critical exception: </span><span class="si">{</span><span class="n">format_exc</span><span class="p">()</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span><span id="__span-0-48"><a id="__codelineno-0-48" name="__codelineno-0-48"></a>            <span class="n">DependencyEndPoint</span><span class="p">(</span><span class="n">logger</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="p">)</span><span class="o">.</span><span class="n">execute_write_to_stdout</span><span class="p">(</span>
+</span><span id="__span-0-49"><a id="__codelineno-0-49" name="__codelineno-0-49"></a>                <span class="n">content</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;Critical failure: </span><span class="si">{</span><span class="n">exception</span><span class="si">}</span><span class="s2">&quot;</span>
+</span><span id="__span-0-50"><a id="__codelineno-0-50" name="__codelineno-0-50"></a>            <span class="p">)</span>
+</span><span id="__span-0-51"><a id="__codelineno-0-51" name="__codelineno-0-51"></a>            <span class="n">DependencyEndPoint</span><span class="p">(</span><span class="n">logger</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="p">)</span><span class="o">.</span><span class="n">execute_exit</span><span class="p">(</span><span class="n">result</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</span><span id="__span-0-52"><a id="__codelineno-0-52" name="__codelineno-0-52"></a>
+</span><span id="__span-0-53"><a id="__codelineno-0-53" name="__codelineno-0-53"></a>    <span class="nd">@property</span>
+</span><span id="__span-0-54"><a id="__codelineno-0-54" name="__codelineno-0-54"></a>    <span class="k">def</span><span class="w"> </span><span class="nf">logger</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span id="__span-0-55"><a id="__codelineno-0-55" name="__codelineno-0-55"></a>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_logger</span>
+</span><span id="__span-0-56"><a id="__codelineno-0-56" name="__codelineno-0-56"></a>
+</span><span id="__span-0-57"><a id="__codelineno-0-57" name="__codelineno-0-57"></a>    <span class="nd">@property</span>
+</span><span id="__span-0-58"><a id="__codelineno-0-58" name="__codelineno-0-58"></a>    <span class="k">def</span><span class="w"> </span><span class="nf">machine</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span id="__span-0-59"><a id="__codelineno-0-59" name="__codelineno-0-59"></a>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_machine</span>
+</span></code></pre></div></td></tr></table></div>
+<p>The constructor takes two parameters:</p>
+<ul>
+<li>logger is the system logger.</li>
+<li>machine is the state-machine service to be executed.</li>
+</ul>
+<p>The execute method runs the state-machine and compiles the the failure reports.</p>
+<div class="language-python highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-26">26</a></span>
+<span class="normal"><a href="#__codelineno-1-27">27</a></span>
+<span class="normal"><a href="#__codelineno-1-28">28</a></span>
+<span class="normal"><a href="#__codelineno-1-29">29</a></span>
+<span class="normal"><a href="#__codelineno-1-30">30</a></span>
+<span class="normal"><a href="#__codelineno-1-31">31</a></span>
+<span class="normal"><a href="#__codelineno-1-32">32</a></span>
+<span class="normal"><a href="#__codelineno-1-33">33</a></span>
+<span class="normal"><a href="#__codelineno-1-34">34</a></span>
+<span class="normal"><a href="#__codelineno-1-35">35</a></span>
+<span class="normal"><a href="#__codelineno-1-36">36</a></span>
+<span class="normal"><a href="#__codelineno-1-37">37</a></span>
+<span class="normal"><a href="#__codelineno-1-38">38</a></span>
+<span class="normal"><a href="#__codelineno-1-39">39</a></span>
+<span class="normal"><a href="#__codelineno-1-40">40</a></span>
+<span class="normal"><a href="#__codelineno-1-41">41</a></span>
+<span class="normal"><a href="#__codelineno-1-42">42</a></span>
+<span class="normal"><a href="#__codelineno-1-43">43</a></span>
+<span class="normal"><a href="#__codelineno-1-44">44</a></span>
+<span class="normal"><a href="#__codelineno-1-45">45</a></span>
+<span class="normal"><a href="#__codelineno-1-46">46</a></span>
+<span class="normal"><a href="#__codelineno-1-47">47</a></span>
+<span class="normal"><a href="#__codelineno-1-48">48</a></span>
+<span class="normal"><a href="#__codelineno-1-49">49</a></span>
+<span class="normal"><a href="#__codelineno-1-50">50</a></span>
+<span class="normal"><a href="#__codelineno-1-51">51</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-26"><a id="__codelineno-1-26" name="__codelineno-1-26"></a>    <span class="k">def</span><span class="w"> </span><span class="nf">execute</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span id="__span-1-27"><a id="__codelineno-1-27" name="__codelineno-1-27"></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+</span><span id="__span-1-28"><a id="__codelineno-1-28" name="__codelineno-1-28"></a><span class="sd">        Executes the machine, filters any failures, reports failures on stdout, and exits with the status of the number of failures.</span>
+</span><span id="__span-1-29"><a id="__codelineno-1-29" name="__codelineno-1-29"></a><span class="sd">        &quot;&quot;&quot;</span>
+</span><span id="__span-1-30"><a id="__codelineno-1-30" name="__codelineno-1-30"></a>        <span class="k">try</span><span class="p">:</span>
+</span><span id="__span-1-31"><a id="__codelineno-1-31" name="__codelineno-1-31"></a>            <span class="bp">self</span><span class="o">.</span><span class="n">_results</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">machine</span><span class="o">.</span><span class="n">execute</span><span class="p">()</span>
+</span><span id="__span-1-32"><a id="__codelineno-1-32" name="__codelineno-1-32"></a>
+</span><span id="__span-1-33"><a id="__codelineno-1-33" name="__codelineno-1-33"></a>            <span class="bp">self</span><span class="o">.</span><span class="n">_failures</span> <span class="o">=</span> <span class="p">[</span>
+</span><span id="__span-1-34"><a id="__codelineno-1-34" name="__codelineno-1-34"></a>                <span class="n">result</span> <span class="k">for</span> <span class="n">result</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_results</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="n">Failure</span><span class="p">)</span>
+</span><span id="__span-1-35"><a id="__codelineno-1-35" name="__codelineno-1-35"></a>            <span class="p">]</span>
+</span><span id="__span-1-36"><a id="__codelineno-1-36" name="__codelineno-1-36"></a>
+</span><span id="__span-1-37"><a id="__codelineno-1-37" name="__codelineno-1-37"></a>            <span class="k">for</span> <span class="n">failure</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_failures</span><span class="p">:</span>
+</span><span id="__span-1-38"><a id="__codelineno-1-38" name="__codelineno-1-38"></a>                <span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Failure: </span><span class="si">{</span><span class="n">failure</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span><span id="__span-1-39"><a id="__codelineno-1-39" name="__codelineno-1-39"></a>                <span class="n">DependencyEndPoint</span><span class="p">(</span><span class="n">logger</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="p">)</span><span class="o">.</span><span class="n">execute_write_to_stdout</span><span class="p">(</span>
+</span><span id="__span-1-40"><a id="__codelineno-1-40" name="__codelineno-1-40"></a>                    <span class="n">content</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;Failure: </span><span class="si">{</span><span class="n">failure</span><span class="si">}</span><span class="s2">&quot;</span>
+</span><span id="__span-1-41"><a id="__codelineno-1-41" name="__codelineno-1-41"></a>                <span class="p">)</span>
+</span><span id="__span-1-42"><a id="__codelineno-1-42" name="__codelineno-1-42"></a>
+</span><span id="__span-1-43"><a id="__codelineno-1-43" name="__codelineno-1-43"></a>            <span class="n">DependencyEndPoint</span><span class="p">(</span><span class="n">logger</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="p">)</span><span class="o">.</span><span class="n">execute_exit</span><span class="p">(</span>
+</span><span id="__span-1-44"><a id="__codelineno-1-44" name="__codelineno-1-44"></a>                <span class="n">result</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_failures</span><span class="p">)</span>
+</span><span id="__span-1-45"><a id="__codelineno-1-45" name="__codelineno-1-45"></a>            <span class="p">)</span>
+</span><span id="__span-1-46"><a id="__codelineno-1-46" name="__codelineno-1-46"></a>        <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">exception</span><span class="p">:</span>
+</span><span id="__span-1-47"><a id="__codelineno-1-47" name="__codelineno-1-47"></a>            <span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">critical</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Critical exception: </span><span class="si">{</span><span class="n">format_exc</span><span class="p">()</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span><span id="__span-1-48"><a id="__codelineno-1-48" name="__codelineno-1-48"></a>            <span class="n">DependencyEndPoint</span><span class="p">(</span><span class="n">logger</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="p">)</span><span class="o">.</span><span class="n">execute_write_to_stdout</span><span class="p">(</span>
+</span><span id="__span-1-49"><a id="__codelineno-1-49" name="__codelineno-1-49"></a>                <span class="n">content</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;Critical failure: </span><span class="si">{</span><span class="n">exception</span><span class="si">}</span><span class="s2">&quot;</span>
+</span><span id="__span-1-50"><a id="__codelineno-1-50" name="__codelineno-1-50"></a>            <span class="p">)</span>
+</span><span id="__span-1-51"><a id="__codelineno-1-51" name="__codelineno-1-51"></a>            <span class="n">DependencyEndPoint</span><span class="p">(</span><span class="n">logger</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="p">)</span><span class="o">.</span><span class="n">execute_exit</span><span class="p">(</span><span class="n">result</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</span></code></pre></div></td></tr></table></div>
+<p>The first thing we are going to do in the try-block, is execute the state-machine, which is going to report the successes and failures back to us.</p>
+<p>We then filter out the failures from the results.</p>
+<p>For each failure we output a line describing the failure to stdout.  DependencyEndPoint.execute_write_to_stdout is a wrapper Python's builtin print function.  We treat as a Repository for unit testing purposes.</p>
+<p>We then exit the process with the count of failures that occurred as the exit-code.  Zero failures means everything was happy.  DependencyEndPoint.execute_exit is a wrapper around Python's builtin exit function.  Calling exit in the middle a unit test stops everything--including the unit test framework.</p>
+<p>We setup self._results and self._failures as instance variables, so the outcomes of executing a machine are available in unit testing.</p>
+<p>The second type of end-point is a DynamicMountingEndPoint.</p>
+<div class="language-python highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-2-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-2-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-2-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-2-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-2-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-2-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-2-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-2-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-2-10">10</a></span>
+<span class="normal"><a href="#__codelineno-2-11">11</a></span>
+<span class="normal"><a href="#__codelineno-2-12">12</a></span>
+<span class="normal"><a href="#__codelineno-2-13">13</a></span>
+<span class="normal"><a href="#__codelineno-2-14">14</a></span>
+<span class="normal"><a href="#__codelineno-2-15">15</a></span>
+<span class="normal"><a href="#__codelineno-2-16">16</a></span>
+<span class="normal"><a href="#__codelineno-2-17">17</a></span>
+<span class="normal"><a href="#__codelineno-2-18">18</a></span>
+<span class="normal"><a href="#__codelineno-2-19">19</a></span>
+<span class="normal"><a href="#__codelineno-2-20">20</a></span>
+<span class="normal"><a href="#__codelineno-2-21">21</a></span>
+<span class="normal"><a href="#__codelineno-2-22">22</a></span>
+<span class="normal"><a href="#__codelineno-2-23">23</a></span>
+<span class="normal"><a href="#__codelineno-2-24">24</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="c1"># application imports</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="kn">from</span><span class="w"> </span><span class="nn">state_machine</span><span class="w"> </span><span class="kn">import</span> <span class="n">Logger</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="kn">from</span><span class="w"> </span><span class="nn">long_term_storage.service.dynamic_mount</span><span class="w"> </span><span class="kn">import</span> <span class="p">(</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4"></a>    <span class="n">MachineDynamicMount</span><span class="p">,</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5"></a>    <span class="n">StateDynamicMount</span><span class="p">,</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="p">)</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7"></a>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="c1"># local imports</span>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="kn">from</span><span class="w"> </span><span class="nn">.end_point</span><span class="w"> </span><span class="kn">import</span> <span class="n">EndPoint</span>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10"></a>
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11"></a>
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12"></a><span class="k">class</span><span class="w"> </span><span class="nc">DynamicMountingEndPoint</span><span class="p">(</span><span class="n">EndPoint</span><span class="p">):</span>
+</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14"></a><span class="sd">    Executes a state machine within a dynamic mounting machine.</span>
+</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15"></a><span class="sd">    &quot;&quot;&quot;</span>
+</span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16"></a>
+</span><span id="__span-2-17"><a id="__codelineno-2-17" name="__codelineno-2-17"></a>    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span>
+</span><span id="__span-2-18"><a id="__codelineno-2-18" name="__codelineno-2-18"></a>        <span class="bp">self</span><span class="p">,</span>
+</span><span id="__span-2-19"><a id="__codelineno-2-19" name="__codelineno-2-19"></a>        <span class="o">*</span><span class="p">,</span>
+</span><span id="__span-2-20"><a id="__codelineno-2-20" name="__codelineno-2-20"></a>        <span class="n">logger</span><span class="p">:</span> <span class="n">Logger</span><span class="p">,</span>
+</span><span id="__span-2-21"><a id="__codelineno-2-21" name="__codelineno-2-21"></a>        <span class="n">state_dynamic_mount</span><span class="p">:</span> <span class="n">StateDynamicMount</span><span class="p">,</span>
+</span><span id="__span-2-22"><a id="__codelineno-2-22" name="__codelineno-2-22"></a>    <span class="p">):</span>
+</span><span id="__span-2-23"><a id="__codelineno-2-23" name="__codelineno-2-23"></a>        <span class="n">wrapped_machine</span> <span class="o">=</span> <span class="n">MachineDynamicMount</span><span class="p">(</span><span class="n">logger</span><span class="o">=</span><span class="n">logger</span><span class="p">,</span> <span class="n">state</span><span class="o">=</span><span class="n">state_dynamic_mount</span><span class="p">)</span>
+</span><span id="__span-2-24"><a id="__codelineno-2-24" name="__codelineno-2-24"></a>        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">logger</span><span class="o">=</span><span class="n">logger</span><span class="p">,</span> <span class="n">machine</span><span class="o">=</span><span class="n">wrapped_machine</span><span class="p">)</span>
+</span></code></pre></div></td></tr></table></div>
+<p>Dynamic mounting/unmounting of the file-shares was tacked on top of existing code that assumed the file-share would be mounted prior to execution.  MachineDynamicMount that takes an arbitrary state-machine as a parameter, mounts the file-share prior to executing the provided machine, and unmounts the file-share following execution of the machine.</p>
+<p>DynamicMountingEndPoint overrides the construction of EndPoint to insert MachineDynamicMount as the state-machine to be executed.</p>
+<p>The full definition of an "end-point" in this case is a command line script to be executed by the Control-M scheduler.  Taking a look at the definition of the backup script:</p>
+<div class="language-python highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">  1</a></span>
+<span class="normal"><a href="#__codelineno-3-2">  2</a></span>
+<span class="normal"><a href="#__codelineno-3-3">  3</a></span>
+<span class="normal"><a href="#__codelineno-3-4">  4</a></span>
+<span class="normal"><a href="#__codelineno-3-5">  5</a></span>
+<span class="normal"><a href="#__codelineno-3-6">  6</a></span>
+<span class="normal"><a href="#__codelineno-3-7">  7</a></span>
+<span class="normal"><a href="#__codelineno-3-8">  8</a></span>
+<span class="normal"><a href="#__codelineno-3-9">  9</a></span>
+<span class="normal"><a href="#__codelineno-3-10"> 10</a></span>
+<span class="normal"><a href="#__codelineno-3-11"> 11</a></span>
+<span class="normal"><a href="#__codelineno-3-12"> 12</a></span>
+<span class="normal"><a href="#__codelineno-3-13"> 13</a></span>
+<span class="normal"><a href="#__codelineno-3-14"> 14</a></span>
+<span class="normal"><a href="#__codelineno-3-15"> 15</a></span>
+<span class="normal"><a href="#__codelineno-3-16"> 16</a></span>
+<span class="normal"><a href="#__codelineno-3-17"> 17</a></span>
+<span class="normal"><a href="#__codelineno-3-18"> 18</a></span>
+<span class="normal"><a href="#__codelineno-3-19"> 19</a></span>
+<span class="normal"><a href="#__codelineno-3-20"> 20</a></span>
+<span class="normal"><a href="#__codelineno-3-21"> 21</a></span>
+<span class="normal"><a href="#__codelineno-3-22"> 22</a></span>
+<span class="normal"><a href="#__codelineno-3-23"> 23</a></span>
+<span class="normal"><a href="#__codelineno-3-24"> 24</a></span>
+<span class="normal"><a href="#__codelineno-3-25"> 25</a></span>
+<span class="normal"><a href="#__codelineno-3-26"> 26</a></span>
+<span class="normal"><a href="#__codelineno-3-27"> 27</a></span>
+<span class="normal"><a href="#__codelineno-3-28"> 28</a></span>
+<span class="normal"><a href="#__codelineno-3-29"> 29</a></span>
+<span class="normal"><a href="#__codelineno-3-30"> 30</a></span>
+<span class="normal"><a href="#__codelineno-3-31"> 31</a></span>
+<span class="normal"><a href="#__codelineno-3-32"> 32</a></span>
+<span class="normal"><a href="#__codelineno-3-33"> 33</a></span>
+<span class="normal"><a href="#__codelineno-3-34"> 34</a></span>
+<span class="normal"><a href="#__codelineno-3-35"> 35</a></span>
+<span class="normal"><a href="#__codelineno-3-36"> 36</a></span>
+<span class="normal"><a href="#__codelineno-3-37"> 37</a></span>
+<span class="normal"><a href="#__codelineno-3-38"> 38</a></span>
+<span class="normal"><a href="#__codelineno-3-39"> 39</a></span>
+<span class="normal"><a href="#__codelineno-3-40"> 40</a></span>
+<span class="normal"><a href="#__codelineno-3-41"> 41</a></span>
+<span class="normal"><a href="#__codelineno-3-42"> 42</a></span>
+<span class="normal"><a href="#__codelineno-3-43"> 43</a></span>
+<span class="normal"><a href="#__codelineno-3-44"> 44</a></span>
+<span class="normal"><a href="#__codelineno-3-45"> 45</a></span>
+<span class="normal"><a href="#__codelineno-3-46"> 46</a></span>
+<span class="normal"><a href="#__codelineno-3-47"> 47</a></span>
+<span class="normal"><a href="#__codelineno-3-48"> 48</a></span>
+<span class="normal"><a href="#__codelineno-3-49"> 49</a></span>
+<span class="normal"><a href="#__codelineno-3-50"> 50</a></span>
+<span class="normal"><a href="#__codelineno-3-51"> 51</a></span>
+<span class="normal"><a href="#__codelineno-3-52"> 52</a></span>
+<span class="normal"><a href="#__codelineno-3-53"> 53</a></span>
+<span class="normal"><a href="#__codelineno-3-54"> 54</a></span>
+<span class="normal"><a href="#__codelineno-3-55"> 55</a></span>
+<span class="normal"><a href="#__codelineno-3-56"> 56</a></span>
+<span class="normal"><a href="#__codelineno-3-57"> 57</a></span>
+<span class="normal"><a href="#__codelineno-3-58"> 58</a></span>
+<span class="normal"><a href="#__codelineno-3-59"> 59</a></span>
+<span class="normal"><a href="#__codelineno-3-60"> 60</a></span>
+<span class="normal"><a href="#__codelineno-3-61"> 61</a></span>
+<span class="normal"><a href="#__codelineno-3-62"> 62</a></span>
+<span class="normal"><a href="#__codelineno-3-63"> 63</a></span>
+<span class="normal"><a href="#__codelineno-3-64"> 64</a></span>
+<span class="normal"><a href="#__codelineno-3-65"> 65</a></span>
+<span class="normal"><a href="#__codelineno-3-66"> 66</a></span>
+<span class="normal"><a href="#__codelineno-3-67"> 67</a></span>
+<span class="normal"><a href="#__codelineno-3-68"> 68</a></span>
+<span class="normal"><a href="#__codelineno-3-69"> 69</a></span>
+<span class="normal"><a href="#__codelineno-3-70"> 70</a></span>
+<span class="normal"><a href="#__codelineno-3-71"> 71</a></span>
+<span class="normal"><a href="#__codelineno-3-72"> 72</a></span>
+<span class="normal"><a href="#__codelineno-3-73"> 73</a></span>
+<span class="normal"><a href="#__codelineno-3-74"> 74</a></span>
+<span class="normal"><a href="#__codelineno-3-75"> 75</a></span>
+<span class="normal"><a href="#__codelineno-3-76"> 76</a></span>
+<span class="normal"><a href="#__codelineno-3-77"> 77</a></span>
+<span class="normal"><a href="#__codelineno-3-78"> 78</a></span>
+<span class="normal"><a href="#__codelineno-3-79"> 79</a></span>
+<span class="normal"><a href="#__codelineno-3-80"> 80</a></span>
+<span class="normal"><a href="#__codelineno-3-81"> 81</a></span>
+<span class="normal"><a href="#__codelineno-3-82"> 82</a></span>
+<span class="normal"><a href="#__codelineno-3-83"> 83</a></span>
+<span class="normal"><a href="#__codelineno-3-84"> 84</a></span>
+<span class="normal"><a href="#__codelineno-3-85"> 85</a></span>
+<span class="normal"><a href="#__codelineno-3-86"> 86</a></span>
+<span class="normal"><a href="#__codelineno-3-87"> 87</a></span>
+<span class="normal"><a href="#__codelineno-3-88"> 88</a></span>
+<span class="normal"><a href="#__codelineno-3-89"> 89</a></span>
+<span class="normal"><a href="#__codelineno-3-90"> 90</a></span>
+<span class="normal"><a href="#__codelineno-3-91"> 91</a></span>
+<span class="normal"><a href="#__codelineno-3-92"> 92</a></span>
+<span class="normal"><a href="#__codelineno-3-93"> 93</a></span>
+<span class="normal"><a href="#__codelineno-3-94"> 94</a></span>
+<span class="normal"><a href="#__codelineno-3-95"> 95</a></span>
+<span class="normal"><a href="#__codelineno-3-96"> 96</a></span>
+<span class="normal"><a href="#__codelineno-3-97"> 97</a></span>
+<span class="normal"><a href="#__codelineno-3-98"> 98</a></span>
+<span class="normal"><a href="#__codelineno-3-99"> 99</a></span>
+<span class="normal"><a href="#__codelineno-3-100">100</a></span>
+<span class="normal"><a href="#__codelineno-3-101">101</a></span>
+<span class="normal"><a href="#__codelineno-3-102">102</a></span>
+<span class="normal"><a href="#__codelineno-3-103">103</a></span>
+<span class="normal"><a href="#__codelineno-3-104">104</a></span>
+<span class="normal"><a href="#__codelineno-3-105">105</a></span>
+<span class="normal"><a href="#__codelineno-3-106">106</a></span>
+<span class="normal"><a href="#__codelineno-3-107">107</a></span>
+<span class="normal"><a href="#__codelineno-3-108">108</a></span>
+<span class="normal"><a href="#__codelineno-3-109">109</a></span>
+<span class="normal"><a href="#__codelineno-3-110">110</a></span>
+<span class="normal"><a href="#__codelineno-3-111">111</a></span>
+<span class="normal"><a href="#__codelineno-3-112">112</a></span>
+<span class="normal"><a href="#__codelineno-3-113">113</a></span>
+<span class="normal"><a href="#__codelineno-3-114">114</a></span>
+<span class="normal"><a href="#__codelineno-3-115">115</a></span>
+<span class="normal"><a href="#__codelineno-3-116">116</a></span>
+<span class="normal"><a href="#__codelineno-3-117">117</a></span>
+<span class="normal"><a href="#__codelineno-3-118">118</a></span>
+<span class="normal"><a href="#__codelineno-3-119">119</a></span>
+<span class="normal"><a href="#__codelineno-3-120">120</a></span>
+<span class="normal"><a href="#__codelineno-3-121">121</a></span>
+<span class="normal"><a href="#__codelineno-3-122">122</a></span>
+<span class="normal"><a href="#__codelineno-3-123">123</a></span>
+<span class="normal"><a href="#__codelineno-3-124">124</a></span>
+<span class="normal"><a href="#__codelineno-3-125">125</a></span>
+<span class="normal"><a href="#__codelineno-3-126">126</a></span>
+<span class="normal"><a href="#__codelineno-3-127">127</a></span>
+<span class="normal"><a href="#__codelineno-3-128">128</a></span>
+<span class="normal"><a href="#__codelineno-3-129">129</a></span>
+<span class="normal"><a href="#__codelineno-3-130">130</a></span>
+<span class="normal"><a href="#__codelineno-3-131">131</a></span>
+<span class="normal"><a href="#__codelineno-3-132">132</a></span>
+<span class="normal"><a href="#__codelineno-3-133">133</a></span>
+<span class="normal"><a href="#__codelineno-3-134">134</a></span>
+<span class="normal"><a href="#__codelineno-3-135">135</a></span>
+<span class="normal"><a href="#__codelineno-3-136">136</a></span>
+<span class="normal"><a href="#__codelineno-3-137">137</a></span>
+<span class="normal"><a href="#__codelineno-3-138">138</a></span>
+<span class="normal"><a href="#__codelineno-3-139">139</a></span>
+<span class="normal"><a href="#__codelineno-3-140">140</a></span>
+<span class="normal"><a href="#__codelineno-3-141">141</a></span>
+<span class="normal"><a href="#__codelineno-3-142">142</a></span>
+<span class="normal"><a href="#__codelineno-3-143">143</a></span>
+<span class="normal"><a href="#__codelineno-3-144">144</a></span>
+<span class="normal"><a href="#__codelineno-3-145">145</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="sd">&quot;&quot;&quot;</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="sd">Script to execute the backup of a PostgreSQL instance.</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3"></a>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="sd">usage: python -m backup.run [-h] [--tenant_id TENANT_ID] [--authority_host AUTHORITY_HOST] client_name eoy_month key_vault client_id client_secret</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5"></a>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="sd">Backup a PostgreSQL instance.</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7"></a>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8"></a><span class="sd">positional arguments:</span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9"></a><span class="sd">  client_name           The name of the client to be backed up</span>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10"></a><span class="sd">  eoy_month             The month that designates the end-of-year (1-12)</span>
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11"></a><span class="sd">  key_vault             The url of the client&#39;s key vault</span>
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12"></a><span class="sd">  client_id             The client id for the Service Principal</span>
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13"></a><span class="sd">  client_secret         The secret for the Service Principal</span>
+</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14"></a>
+</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15"></a><span class="sd">options:</span>
+</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16"></a><span class="sd">  -h, --help            show this help message and exit</span>
+</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17"></a><span class="sd">  --tenant_id TENANT_ID</span>
+</span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18"></a><span class="sd">                        The tenant id for the key vault (optional)</span>
+</span><span id="__span-3-19"><a id="__codelineno-3-19" name="__codelineno-3-19"></a><span class="sd">  --authority_host AUTHORITY_HOST</span>
+</span><span id="__span-3-20"><a id="__codelineno-3-20" name="__codelineno-3-20"></a><span class="sd">                        The authority for authenticating the Service Principal (optional)</span>
+</span><span id="__span-3-21"><a id="__codelineno-3-21" name="__codelineno-3-21"></a><span class="sd">&quot;&quot;&quot;</span>
+</span><span id="__span-3-22"><a id="__codelineno-3-22" name="__codelineno-3-22"></a>
+</span><span id="__span-3-23"><a id="__codelineno-3-23" name="__codelineno-3-23"></a><span class="c1"># standard library imports</span>
+</span><span id="__span-3-24"><a id="__codelineno-3-24" name="__codelineno-3-24"></a><span class="kn">import</span><span class="w"> </span><span class="nn">argparse</span>
+</span><span id="__span-3-25"><a id="__codelineno-3-25" name="__codelineno-3-25"></a><span class="kn">from</span><span class="w"> </span><span class="nn">traceback</span><span class="w"> </span><span class="kn">import</span> <span class="n">format_exc</span>
+</span><span id="__span-3-26"><a id="__codelineno-3-26" name="__codelineno-3-26"></a>
+</span><span id="__span-3-27"><a id="__codelineno-3-27" name="__codelineno-3-27"></a><span class="c1"># third party imports</span>
+</span><span id="__span-3-28"><a id="__codelineno-3-28" name="__codelineno-3-28"></a><span class="kn">from</span><span class="w"> </span><span class="nn">pydantic</span><span class="w"> </span><span class="kn">import</span> <span class="n">SecretStr</span>
+</span><span id="__span-3-29"><a id="__codelineno-3-29" name="__codelineno-3-29"></a>
+</span><span id="__span-3-30"><a id="__codelineno-3-30" name="__codelineno-3-30"></a><span class="c1"># application imports</span>
+</span><span id="__span-3-31"><a id="__codelineno-3-31" name="__codelineno-3-31"></a><span class="kn">from</span><span class="w"> </span><span class="nn">long_term_storage.model.connection.key_vault</span><span class="w"> </span><span class="kn">import</span> <span class="n">ServicePrincipal</span>
+</span><span id="__span-3-32"><a id="__codelineno-3-32" name="__codelineno-3-32"></a><span class="kn">from</span><span class="w"> </span><span class="nn">state_machine.config</span><span class="w"> </span><span class="kn">import</span> <span class="n">encryption</span>
+</span><span id="__span-3-33"><a id="__codelineno-3-33" name="__codelineno-3-33"></a><span class="kn">from</span><span class="w"> </span><span class="nn">long_term_storage.repository</span><span class="w"> </span><span class="kn">import</span> <span class="n">ClientLogger</span>
+</span><span id="__span-3-34"><a id="__codelineno-3-34" name="__codelineno-3-34"></a><span class="kn">from</span><span class="w"> </span><span class="nn">long_term_storage.repository.key_vault</span><span class="w"> </span><span class="kn">import</span> <span class="n">BackupConfigModel</span>
+</span><span id="__span-3-35"><a id="__codelineno-3-35" name="__codelineno-3-35"></a><span class="kn">from</span><span class="w"> </span><span class="nn">long_term_storage.end_point.dynamic_mounting_end_point</span><span class="w"> </span><span class="kn">import</span> <span class="p">(</span>
+</span><span id="__span-3-36"><a id="__codelineno-3-36" name="__codelineno-3-36"></a>    <span class="n">DynamicMountingEndPoint</span><span class="p">,</span>
+</span><span id="__span-3-37"><a id="__codelineno-3-37" name="__codelineno-3-37"></a>    <span class="n">StateDynamicMount</span><span class="p">,</span>
+</span><span id="__span-3-38"><a id="__codelineno-3-38" name="__codelineno-3-38"></a><span class="p">)</span>
+</span><span id="__span-3-39"><a id="__codelineno-3-39" name="__codelineno-3-39"></a><span class="kn">from</span><span class="w"> </span><span class="nn">long_term_storage.service.backup.backup_databases</span><span class="w"> </span><span class="kn">import</span> <span class="p">(</span>
+</span><span id="__span-3-40"><a id="__codelineno-3-40" name="__codelineno-3-40"></a>    <span class="n">MachineBackupDatabases</span><span class="p">,</span>
+</span><span id="__span-3-41"><a id="__codelineno-3-41" name="__codelineno-3-41"></a>    <span class="n">StateBackupDatabases</span><span class="p">,</span>
+</span><span id="__span-3-42"><a id="__codelineno-3-42" name="__codelineno-3-42"></a><span class="p">)</span>
+</span><span id="__span-3-43"><a id="__codelineno-3-43" name="__codelineno-3-43"></a>
+</span><span id="__span-3-44"><a id="__codelineno-3-44" name="__codelineno-3-44"></a>
+</span><span id="__span-3-45"><a id="__codelineno-3-45" name="__codelineno-3-45"></a><span class="k">def</span><span class="w"> </span><span class="nf">run</span><span class="p">(</span>
+</span><span id="__span-3-46"><a id="__codelineno-3-46" name="__codelineno-3-46"></a>    <span class="n">client_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+</span><span id="__span-3-47"><a id="__codelineno-3-47" name="__codelineno-3-47"></a>    <span class="n">eoy_month</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+</span><span id="__span-3-48"><a id="__codelineno-3-48" name="__codelineno-3-48"></a>    <span class="n">tenant_id</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+</span><span id="__span-3-49"><a id="__codelineno-3-49" name="__codelineno-3-49"></a>    <span class="n">client_id</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+</span><span id="__span-3-50"><a id="__codelineno-3-50" name="__codelineno-3-50"></a>    <span class="n">client_secret</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+</span><span id="__span-3-51"><a id="__codelineno-3-51" name="__codelineno-3-51"></a>    <span class="n">authority_host</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+</span><span id="__span-3-52"><a id="__codelineno-3-52" name="__codelineno-3-52"></a>    <span class="n">key_vault</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+</span><span id="__span-3-53"><a id="__codelineno-3-53" name="__codelineno-3-53"></a><span class="p">):</span>
+</span><span id="__span-3-54"><a id="__codelineno-3-54" name="__codelineno-3-54"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+</span><span id="__span-3-55"><a id="__codelineno-3-55" name="__codelineno-3-55"></a><span class="sd">    Configure and execute the job.</span>
+</span><span id="__span-3-56"><a id="__codelineno-3-56" name="__codelineno-3-56"></a><span class="sd">    &quot;&quot;&quot;</span>
+</span><span id="__span-3-57"><a id="__codelineno-3-57" name="__codelineno-3-57"></a>    <span class="k">try</span><span class="p">:</span>
+</span><span id="__span-3-58"><a id="__codelineno-3-58" name="__codelineno-3-58"></a>        <span class="c1"># Create the logger.</span>
+</span><span id="__span-3-59"><a id="__codelineno-3-59" name="__codelineno-3-59"></a>        <span class="n">logger</span> <span class="o">=</span> <span class="n">ClientLogger</span><span class="p">(</span>
+</span><span id="__span-3-60"><a id="__codelineno-3-60" name="__codelineno-3-60"></a>            <span class="n">client_name</span><span class="o">=</span><span class="n">client_name</span><span class="p">,</span>
+</span><span id="__span-3-61"><a id="__codelineno-3-61" name="__codelineno-3-61"></a>            <span class="n">file_name</span><span class="o">=</span><span class="n">MachineBackupDatabases</span><span class="o">.</span><span class="vm">__module__</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">)[</span><span class="mi">2</span><span class="p">],</span>
+</span><span id="__span-3-62"><a id="__codelineno-3-62" name="__codelineno-3-62"></a>        <span class="p">)</span>
+</span><span id="__span-3-63"><a id="__codelineno-3-63" name="__codelineno-3-63"></a>
+</span><span id="__span-3-64"><a id="__codelineno-3-64" name="__codelineno-3-64"></a>        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;***************&quot;</span><span class="p">)</span>
+</span><span id="__span-3-65"><a id="__codelineno-3-65" name="__codelineno-3-65"></a>
+</span><span id="__span-3-66"><a id="__codelineno-3-66" name="__codelineno-3-66"></a>        <span class="c1"># Load connection config from key vault.</span>
+</span><span id="__span-3-67"><a id="__codelineno-3-67" name="__codelineno-3-67"></a>        <span class="n">connection_model</span> <span class="o">=</span> <span class="n">ServicePrincipal</span><span class="p">(</span>
+</span><span id="__span-3-68"><a id="__codelineno-3-68" name="__codelineno-3-68"></a>            <span class="n">keyvault_host</span><span class="o">=</span><span class="n">key_vault</span><span class="p">,</span>
+</span><span id="__span-3-69"><a id="__codelineno-3-69" name="__codelineno-3-69"></a>            <span class="n">service_principal_id</span><span class="o">=</span><span class="n">client_id</span><span class="p">,</span>
+</span><span id="__span-3-70"><a id="__codelineno-3-70" name="__codelineno-3-70"></a>            <span class="n">client_secret</span><span class="o">=</span><span class="n">SecretStr</span><span class="p">(</span><span class="n">secret_value</span><span class="o">=</span><span class="n">encryption</span><span class="o">.</span><span class="n">decrypt</span><span class="p">(</span><span class="n">client_secret</span><span class="p">)),</span>
+</span><span id="__span-3-71"><a id="__codelineno-3-71" name="__codelineno-3-71"></a>            <span class="n">tenant_id</span><span class="o">=</span><span class="n">tenant_id</span><span class="p">,</span>
+</span><span id="__span-3-72"><a id="__codelineno-3-72" name="__codelineno-3-72"></a>            <span class="n">authority_host</span><span class="o">=</span><span class="n">authority_host</span><span class="p">,</span>
+</span><span id="__span-3-73"><a id="__codelineno-3-73" name="__codelineno-3-73"></a>        <span class="p">)</span>
+</span><span id="__span-3-74"><a id="__codelineno-3-74" name="__codelineno-3-74"></a>        <span class="n">backup_config</span> <span class="o">=</span> <span class="n">BackupConfigModel</span><span class="o">.</span><span class="n">from_keyvault</span><span class="p">(</span>
+</span><span id="__span-3-75"><a id="__codelineno-3-75" name="__codelineno-3-75"></a>            <span class="n">logger</span><span class="o">=</span><span class="n">logger</span><span class="p">,</span> <span class="n">connection_model</span><span class="o">=</span><span class="n">connection_model</span>
+</span><span id="__span-3-76"><a id="__codelineno-3-76" name="__codelineno-3-76"></a>        <span class="p">)</span>
+</span><span id="__span-3-77"><a id="__codelineno-3-77" name="__codelineno-3-77"></a>
+</span><span id="__span-3-78"><a id="__codelineno-3-78" name="__codelineno-3-78"></a>        <span class="c1"># Bundle up the model the machine expects and create the machine.</span>
+</span><span id="__span-3-79"><a id="__codelineno-3-79" name="__codelineno-3-79"></a>        <span class="n">state</span> <span class="o">=</span> <span class="n">StateBackupDatabases</span><span class="p">(</span>
+</span><span id="__span-3-80"><a id="__codelineno-3-80" name="__codelineno-3-80"></a>            <span class="n">client_name</span><span class="o">=</span><span class="n">client_name</span><span class="p">,</span> <span class="n">backup_config</span><span class="o">=</span><span class="n">backup_config</span><span class="p">,</span> <span class="n">eoy_month</span><span class="o">=</span><span class="n">eoy_month</span>
+</span><span id="__span-3-81"><a id="__codelineno-3-81" name="__codelineno-3-81"></a>        <span class="p">)</span>
+</span><span id="__span-3-82"><a id="__codelineno-3-82" name="__codelineno-3-82"></a>        <span class="n">machine</span> <span class="o">=</span> <span class="n">MachineBackupDatabases</span><span class="p">(</span><span class="n">logger</span><span class="o">=</span><span class="n">logger</span><span class="p">,</span> <span class="n">state</span><span class="o">=</span><span class="n">state</span><span class="p">)</span>
+</span><span id="__span-3-83"><a id="__codelineno-3-83" name="__codelineno-3-83"></a>
+</span><span id="__span-3-84"><a id="__codelineno-3-84" name="__codelineno-3-84"></a>        <span class="c1"># Use the end-point that wraps the machine with auto-mounting/unmounting</span>
+</span><span id="__span-3-85"><a id="__codelineno-3-85" name="__codelineno-3-85"></a>        <span class="c1"># of the file share.</span>
+</span><span id="__span-3-86"><a id="__codelineno-3-86" name="__codelineno-3-86"></a>        <span class="n">end_point</span> <span class="o">=</span> <span class="n">DynamicMountingEndPoint</span><span class="p">(</span>
+</span><span id="__span-3-87"><a id="__codelineno-3-87" name="__codelineno-3-87"></a>            <span class="n">logger</span><span class="o">=</span><span class="n">logger</span><span class="p">,</span>
+</span><span id="__span-3-88"><a id="__codelineno-3-88" name="__codelineno-3-88"></a>            <span class="n">state_dynamic_mount</span><span class="o">=</span><span class="n">StateDynamicMount</span><span class="p">(</span>
+</span><span id="__span-3-89"><a id="__codelineno-3-89" name="__codelineno-3-89"></a>                <span class="n">client_name</span><span class="o">=</span><span class="n">client_name</span><span class="p">,</span>
+</span><span id="__span-3-90"><a id="__codelineno-3-90" name="__codelineno-3-90"></a>                <span class="n">backup_config</span><span class="o">=</span><span class="n">backup_config</span><span class="p">,</span>
+</span><span id="__span-3-91"><a id="__codelineno-3-91" name="__codelineno-3-91"></a>                <span class="n">machine_to_wrap</span><span class="o">=</span><span class="n">machine</span><span class="p">,</span>
+</span><span id="__span-3-92"><a id="__codelineno-3-92" name="__codelineno-3-92"></a>            <span class="p">),</span>
+</span><span id="__span-3-93"><a id="__codelineno-3-93" name="__codelineno-3-93"></a>        <span class="p">)</span>
+</span><span id="__span-3-94"><a id="__codelineno-3-94" name="__codelineno-3-94"></a>        <span class="n">end_point</span><span class="o">.</span><span class="n">execute</span><span class="p">()</span>
+</span><span id="__span-3-95"><a id="__codelineno-3-95" name="__codelineno-3-95"></a>
+</span><span id="__span-3-96"><a id="__codelineno-3-96" name="__codelineno-3-96"></a>    <span class="c1"># If anything goes wrong, dump the traceback to stdout and exit with a failure.</span>
+</span><span id="__span-3-97"><a id="__codelineno-3-97" name="__codelineno-3-97"></a>    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">exception</span><span class="p">:</span>
+</span><span id="__span-3-98"><a id="__codelineno-3-98" name="__codelineno-3-98"></a>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Critical failure: </span><span class="si">{</span><span class="n">exception</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span><span id="__span-3-99"><a id="__codelineno-3-99" name="__codelineno-3-99"></a>        <span class="nb">print</span><span class="p">(</span><span class="n">format_exc</span><span class="p">())</span>
+</span><span id="__span-3-100"><a id="__codelineno-3-100" name="__codelineno-3-100"></a>        <span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</span><span id="__span-3-101"><a id="__codelineno-3-101" name="__codelineno-3-101"></a>
+</span><span id="__span-3-102"><a id="__codelineno-3-102" name="__codelineno-3-102"></a>
+</span><span id="__span-3-103"><a id="__codelineno-3-103" name="__codelineno-3-103"></a><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+</span><span id="__span-3-104"><a id="__codelineno-3-104" name="__codelineno-3-104"></a>    <span class="c1"># Define the command line arguments.</span>
+</span><span id="__span-3-105"><a id="__codelineno-3-105" name="__codelineno-3-105"></a>    <span class="n">parser</span> <span class="o">=</span> <span class="n">argparse</span><span class="o">.</span><span class="n">ArgumentParser</span><span class="p">(</span>
+</span><span id="__span-3-106"><a id="__codelineno-3-106" name="__codelineno-3-106"></a>        <span class="n">prog</span><span class="o">=</span><span class="s2">&quot;python -m backup.run&quot;</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Backup a PostgreSQL instance.&quot;</span>
+</span><span id="__span-3-107"><a id="__codelineno-3-107" name="__codelineno-3-107"></a>    <span class="p">)</span>
+</span><span id="__span-3-108"><a id="__codelineno-3-108" name="__codelineno-3-108"></a>    <span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span>
+</span><span id="__span-3-109"><a id="__codelineno-3-109" name="__codelineno-3-109"></a>        <span class="s2">&quot;client_name&quot;</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s2">&quot;The name of the client to be backed up&quot;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">str</span>
+</span><span id="__span-3-110"><a id="__codelineno-3-110" name="__codelineno-3-110"></a>    <span class="p">)</span>
+</span><span id="__span-3-111"><a id="__codelineno-3-111" name="__codelineno-3-111"></a>    <span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span>
+</span><span id="__span-3-112"><a id="__codelineno-3-112" name="__codelineno-3-112"></a>        <span class="s2">&quot;eoy_month&quot;</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s2">&quot;The month that designates the end-of-year (1-12)&quot;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">int</span>
+</span><span id="__span-3-113"><a id="__codelineno-3-113" name="__codelineno-3-113"></a>    <span class="p">)</span>
+</span><span id="__span-3-114"><a id="__codelineno-3-114" name="__codelineno-3-114"></a>    <span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s2">&quot;key_vault&quot;</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s2">&quot;The url of the client&#39;s key vault&quot;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">str</span><span class="p">)</span>
+</span><span id="__span-3-115"><a id="__codelineno-3-115" name="__codelineno-3-115"></a>    <span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span>
+</span><span id="__span-3-116"><a id="__codelineno-3-116" name="__codelineno-3-116"></a>        <span class="s2">&quot;client_id&quot;</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s2">&quot;The client id for the Service Principal&quot;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">str</span>
+</span><span id="__span-3-117"><a id="__codelineno-3-117" name="__codelineno-3-117"></a>    <span class="p">)</span>
+</span><span id="__span-3-118"><a id="__codelineno-3-118" name="__codelineno-3-118"></a>    <span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span>
+</span><span id="__span-3-119"><a id="__codelineno-3-119" name="__codelineno-3-119"></a>        <span class="s2">&quot;client_secret&quot;</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s2">&quot;The secret for the Service Principal&quot;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">str</span>
+</span><span id="__span-3-120"><a id="__codelineno-3-120" name="__codelineno-3-120"></a>    <span class="p">)</span>
+</span><span id="__span-3-121"><a id="__codelineno-3-121" name="__codelineno-3-121"></a>    <span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span>
+</span><span id="__span-3-122"><a id="__codelineno-3-122" name="__codelineno-3-122"></a>        <span class="s2">&quot;--tenant_id&quot;</span><span class="p">,</span>
+</span><span id="__span-3-123"><a id="__codelineno-3-123" name="__codelineno-3-123"></a>        <span class="n">help</span><span class="o">=</span><span class="s2">&quot;The tenant id for the key vault (optional)&quot;</span><span class="p">,</span>
+</span><span id="__span-3-124"><a id="__codelineno-3-124" name="__codelineno-3-124"></a>        <span class="nb">type</span><span class="o">=</span><span class="nb">str</span><span class="p">,</span>
+</span><span id="__span-3-125"><a id="__codelineno-3-125" name="__codelineno-3-125"></a>        <span class="n">default</span><span class="o">=</span><span class="s2">&quot;e17e2402-2a40-42ce-ad75-5848b8d4f6b6&quot;</span><span class="p">,</span>
+</span><span id="__span-3-126"><a id="__codelineno-3-126" name="__codelineno-3-126"></a>    <span class="p">)</span>
+</span><span id="__span-3-127"><a id="__codelineno-3-127" name="__codelineno-3-127"></a>    <span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span>
+</span><span id="__span-3-128"><a id="__codelineno-3-128" name="__codelineno-3-128"></a>        <span class="s2">&quot;--authority_host&quot;</span><span class="p">,</span>
+</span><span id="__span-3-129"><a id="__codelineno-3-129" name="__codelineno-3-129"></a>        <span class="n">help</span><span class="o">=</span><span class="s2">&quot;The authority for authenticating the Service Principal (optional)&quot;</span><span class="p">,</span>
+</span><span id="__span-3-130"><a id="__codelineno-3-130" name="__codelineno-3-130"></a>        <span class="n">default</span><span class="o">=</span><span class="s2">&quot;https://login.microsoftonline.com&quot;</span><span class="p">,</span>
+</span><span id="__span-3-131"><a id="__codelineno-3-131" name="__codelineno-3-131"></a>    <span class="p">)</span>
+</span><span id="__span-3-132"><a id="__codelineno-3-132" name="__codelineno-3-132"></a>
+</span><span id="__span-3-133"><a id="__codelineno-3-133" name="__codelineno-3-133"></a>    <span class="c1"># Parse the command line arguments.</span>
+</span><span id="__span-3-134"><a id="__codelineno-3-134" name="__codelineno-3-134"></a>    <span class="n">args</span> <span class="o">=</span> <span class="n">parser</span><span class="o">.</span><span class="n">parse_args</span><span class="p">()</span>
+</span><span id="__span-3-135"><a id="__codelineno-3-135" name="__codelineno-3-135"></a>
+</span><span id="__span-3-136"><a id="__codelineno-3-136" name="__codelineno-3-136"></a>    <span class="c1"># Execute the job.</span>
+</span><span id="__span-3-137"><a id="__codelineno-3-137" name="__codelineno-3-137"></a>    <span class="n">run</span><span class="p">(</span>
+</span><span id="__span-3-138"><a id="__codelineno-3-138" name="__codelineno-3-138"></a>        <span class="n">client_name</span><span class="o">=</span><span class="n">args</span><span class="o">.</span><span class="n">client_name</span><span class="p">,</span>
+</span><span id="__span-3-139"><a id="__codelineno-3-139" name="__codelineno-3-139"></a>        <span class="n">eoy_month</span><span class="o">=</span><span class="n">args</span><span class="o">.</span><span class="n">eoy_month</span><span class="p">,</span>
+</span><span id="__span-3-140"><a id="__codelineno-3-140" name="__codelineno-3-140"></a>        <span class="n">tenant_id</span><span class="o">=</span><span class="n">args</span><span class="o">.</span><span class="n">tenant_id</span><span class="p">,</span>
+</span><span id="__span-3-141"><a id="__codelineno-3-141" name="__codelineno-3-141"></a>        <span class="n">client_id</span><span class="o">=</span><span class="n">args</span><span class="o">.</span><span class="n">client_id</span><span class="p">,</span>
+</span><span id="__span-3-142"><a id="__codelineno-3-142" name="__codelineno-3-142"></a>        <span class="n">client_secret</span><span class="o">=</span><span class="n">args</span><span class="o">.</span><span class="n">client_secret</span><span class="p">,</span>
+</span><span id="__span-3-143"><a id="__codelineno-3-143" name="__codelineno-3-143"></a>        <span class="n">authority_host</span><span class="o">=</span><span class="n">args</span><span class="o">.</span><span class="n">authority_host</span><span class="p">,</span>
+</span><span id="__span-3-144"><a id="__codelineno-3-144" name="__codelineno-3-144"></a>        <span class="n">key_vault</span><span class="o">=</span><span class="n">args</span><span class="o">.</span><span class="n">key_vault</span><span class="p">,</span>
+</span><span id="__span-3-145"><a id="__codelineno-3-145" name="__codelineno-3-145"></a>    <span class="p">)</span>
+</span></code></pre></div></td></tr></table></div>
+<p>The script starts at the bottom-ish of the file in the part following line 98.</p>
+<div class="language-python highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-105">105</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-4-105"><a id="__codelineno-4-105" name="__codelineno-4-105"></a><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+</span></code></pre></div></td></tr></table></div>
+<p>This is a magic incantation in Python that determines whether the module was invoked directly from the command line or has been imported by another module.  When the module is executed from the command line, the builtin value of __name__ will contain "__main__".  When imported, __name__ will contain a module namespace value that is not "__main__", so when importing, the part after the "if" statement will not be executed.</p>
+<p>The first thing the script does is defined the command line parameters.</p>
+<div class="language-python highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-106">106</a></span>
+<span class="normal"><a href="#__codelineno-5-107">107</a></span>
+<span class="normal"><a href="#__codelineno-5-108">108</a></span>
+<span class="normal"><a href="#__codelineno-5-109">109</a></span>
+<span class="normal"><a href="#__codelineno-5-110">110</a></span>
+<span class="normal"><a href="#__codelineno-5-111">111</a></span>
+<span class="normal"><a href="#__codelineno-5-112">112</a></span>
+<span class="normal"><a href="#__codelineno-5-113">113</a></span>
+<span class="normal"><a href="#__codelineno-5-114">114</a></span>
+<span class="normal"><a href="#__codelineno-5-115">115</a></span>
+<span class="normal"><a href="#__codelineno-5-116">116</a></span>
+<span class="normal"><a href="#__codelineno-5-117">117</a></span>
+<span class="normal"><a href="#__codelineno-5-118">118</a></span>
+<span class="normal"><a href="#__codelineno-5-119">119</a></span>
+<span class="normal"><a href="#__codelineno-5-120">120</a></span>
+<span class="normal"><a href="#__codelineno-5-121">121</a></span>
+<span class="normal"><a href="#__codelineno-5-122">122</a></span>
+<span class="normal"><a href="#__codelineno-5-123">123</a></span>
+<span class="normal"><a href="#__codelineno-5-124">124</a></span>
+<span class="normal"><a href="#__codelineno-5-125">125</a></span>
+<span class="normal"><a href="#__codelineno-5-126">126</a></span>
+<span class="normal"><a href="#__codelineno-5-127">127</a></span>
+<span class="normal"><a href="#__codelineno-5-128">128</a></span>
+<span class="normal"><a href="#__codelineno-5-129">129</a></span>
+<span class="normal"><a href="#__codelineno-5-130">130</a></span>
+<span class="normal"><a href="#__codelineno-5-131">131</a></span>
+<span class="normal"><a href="#__codelineno-5-132">132</a></span>
+<span class="normal"><a href="#__codelineno-5-133">133</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-5-106"><a id="__codelineno-5-106" name="__codelineno-5-106"></a>    <span class="c1"># Define the command line arguments.</span>
+</span><span id="__span-5-107"><a id="__codelineno-5-107" name="__codelineno-5-107"></a>    <span class="n">parser</span> <span class="o">=</span> <span class="n">argparse</span><span class="o">.</span><span class="n">ArgumentParser</span><span class="p">(</span>
+</span><span id="__span-5-108"><a id="__codelineno-5-108" name="__codelineno-5-108"></a>        <span class="n">prog</span><span class="o">=</span><span class="s2">&quot;python -m backup.run&quot;</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Backup a PostgreSQL instance.&quot;</span>
+</span><span id="__span-5-109"><a id="__codelineno-5-109" name="__codelineno-5-109"></a>    <span class="p">)</span>
+</span><span id="__span-5-110"><a id="__codelineno-5-110" name="__codelineno-5-110"></a>    <span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span>
+</span><span id="__span-5-111"><a id="__codelineno-5-111" name="__codelineno-5-111"></a>        <span class="s2">&quot;client_name&quot;</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s2">&quot;The name of the client to be backed up&quot;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">str</span>
+</span><span id="__span-5-112"><a id="__codelineno-5-112" name="__codelineno-5-112"></a>    <span class="p">)</span>
+</span><span id="__span-5-113"><a id="__codelineno-5-113" name="__codelineno-5-113"></a>    <span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span>
+</span><span id="__span-5-114"><a id="__codelineno-5-114" name="__codelineno-5-114"></a>        <span class="s2">&quot;eoy_month&quot;</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s2">&quot;The month that designates the end-of-year (1-12)&quot;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">int</span>
+</span><span id="__span-5-115"><a id="__codelineno-5-115" name="__codelineno-5-115"></a>    <span class="p">)</span>
+</span><span id="__span-5-116"><a id="__codelineno-5-116" name="__codelineno-5-116"></a>    <span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s2">&quot;key_vault&quot;</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s2">&quot;The url of the client&#39;s key vault&quot;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">str</span><span class="p">)</span>
+</span><span id="__span-5-117"><a id="__codelineno-5-117" name="__codelineno-5-117"></a>    <span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span>
+</span><span id="__span-5-118"><a id="__codelineno-5-118" name="__codelineno-5-118"></a>        <span class="s2">&quot;client_id&quot;</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s2">&quot;The client id for the Service Principal&quot;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">str</span>
+</span><span id="__span-5-119"><a id="__codelineno-5-119" name="__codelineno-5-119"></a>    <span class="p">)</span>
+</span><span id="__span-5-120"><a id="__codelineno-5-120" name="__codelineno-5-120"></a>    <span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span>
+</span><span id="__span-5-121"><a id="__codelineno-5-121" name="__codelineno-5-121"></a>        <span class="s2">&quot;client_secret&quot;</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s2">&quot;The secret for the Service Principal&quot;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">str</span>
+</span><span id="__span-5-122"><a id="__codelineno-5-122" name="__codelineno-5-122"></a>    <span class="p">)</span>
+</span><span id="__span-5-123"><a id="__codelineno-5-123" name="__codelineno-5-123"></a>    <span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span>
+</span><span id="__span-5-124"><a id="__codelineno-5-124" name="__codelineno-5-124"></a>        <span class="s2">&quot;--tenant_id&quot;</span><span class="p">,</span>
+</span><span id="__span-5-125"><a id="__codelineno-5-125" name="__codelineno-5-125"></a>        <span class="n">help</span><span class="o">=</span><span class="s2">&quot;The tenant id for the key vault (optional)&quot;</span><span class="p">,</span>
+</span><span id="__span-5-126"><a id="__codelineno-5-126" name="__codelineno-5-126"></a>        <span class="nb">type</span><span class="o">=</span><span class="nb">str</span><span class="p">,</span>
+</span><span id="__span-5-127"><a id="__codelineno-5-127" name="__codelineno-5-127"></a>        <span class="n">default</span><span class="o">=</span><span class="s2">&quot;e17e2402-2a40-42ce-ad75-5848b8d4f6b6&quot;</span><span class="p">,</span>
+</span><span id="__span-5-128"><a id="__codelineno-5-128" name="__codelineno-5-128"></a>    <span class="p">)</span>
+</span><span id="__span-5-129"><a id="__codelineno-5-129" name="__codelineno-5-129"></a>    <span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span>
+</span><span id="__span-5-130"><a id="__codelineno-5-130" name="__codelineno-5-130"></a>        <span class="s2">&quot;--authority_host&quot;</span><span class="p">,</span>
+</span><span id="__span-5-131"><a id="__codelineno-5-131" name="__codelineno-5-131"></a>        <span class="n">help</span><span class="o">=</span><span class="s2">&quot;The authority for authenticating the Service Principal (optional)&quot;</span><span class="p">,</span>
+</span><span id="__span-5-132"><a id="__codelineno-5-132" name="__codelineno-5-132"></a>        <span class="n">default</span><span class="o">=</span><span class="s2">&quot;https://login.microsoftonline.com&quot;</span><span class="p">,</span>
+</span><span id="__span-5-133"><a id="__codelineno-5-133" name="__codelineno-5-133"></a>    <span class="p">)</span>
+</span></code></pre></div></td></tr></table></div>
+<p>We instantiate an ArgumentParser object, and define each of the command line arguments.</p>
+<p>We then compile the definition of the ArgumentParser, which will take care of reading the arguments from the command line and providing the usage/help info for the script when run from the command line.</p>
+<div class="language-python highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-136">136</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-6-136"><a id="__codelineno-6-136" name="__codelineno-6-136"></a>    <span class="n">args</span> <span class="o">=</span> <span class="n">parser</span><span class="o">.</span><span class="n">parse_args</span><span class="p">()</span>
+</span></code></pre></div></td></tr></table></div>
+<p>This exposes the command line arguments as named properties on the "args" variable.</p>
+<p>Finally, we call the run function set up the EndPoint layer and execute the Service layer.</p>
+<div class="language-python highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-139">139</a></span>
+<span class="normal"><a href="#__codelineno-7-140">140</a></span>
+<span class="normal"><a href="#__codelineno-7-141">141</a></span>
+<span class="normal"><a href="#__codelineno-7-142">142</a></span>
+<span class="normal"><a href="#__codelineno-7-143">143</a></span>
+<span class="normal"><a href="#__codelineno-7-144">144</a></span>
+<span class="normal"><a href="#__codelineno-7-145">145</a></span>
+<span class="normal"><a href="#__codelineno-7-146">146</a></span>
+<span class="normal"><a href="#__codelineno-7-147">147</a></span>
+<span class="normal"><a href="#__codelineno-7-148">148</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-7-139"><a id="__codelineno-7-139" name="__codelineno-7-139"></a>    <span class="c1"># Execute the job.</span>
+</span><span id="__span-7-140"><a id="__codelineno-7-140" name="__codelineno-7-140"></a>    <span class="n">run</span><span class="p">(</span>
+</span><span id="__span-7-141"><a id="__codelineno-7-141" name="__codelineno-7-141"></a>        <span class="n">client_name</span><span class="o">=</span><span class="n">args</span><span class="o">.</span><span class="n">client_name</span><span class="p">,</span>
+</span><span id="__span-7-142"><a id="__codelineno-7-142" name="__codelineno-7-142"></a>        <span class="n">eoy_month</span><span class="o">=</span><span class="n">args</span><span class="o">.</span><span class="n">eoy_month</span><span class="p">,</span>
+</span><span id="__span-7-143"><a id="__codelineno-7-143" name="__codelineno-7-143"></a>        <span class="n">tenant_id</span><span class="o">=</span><span class="n">args</span><span class="o">.</span><span class="n">tenant_id</span><span class="p">,</span>
+</span><span id="__span-7-144"><a id="__codelineno-7-144" name="__codelineno-7-144"></a>        <span class="n">client_id</span><span class="o">=</span><span class="n">args</span><span class="o">.</span><span class="n">client_id</span><span class="p">,</span>
+</span><span id="__span-7-145"><a id="__codelineno-7-145" name="__codelineno-7-145"></a>        <span class="n">client_secret</span><span class="o">=</span><span class="n">args</span><span class="o">.</span><span class="n">client_secret</span><span class="p">,</span>
+</span><span id="__span-7-146"><a id="__codelineno-7-146" name="__codelineno-7-146"></a>        <span class="n">authority_host</span><span class="o">=</span><span class="n">args</span><span class="o">.</span><span class="n">authority_host</span><span class="p">,</span>
+</span><span id="__span-7-147"><a id="__codelineno-7-147" name="__codelineno-7-147"></a>        <span class="n">key_vault</span><span class="o">=</span><span class="n">args</span><span class="o">.</span><span class="n">key_vault</span><span class="p">,</span>
+</span><span id="__span-7-148"><a id="__codelineno-7-148" name="__codelineno-7-148"></a>    <span class="p">)</span>
+</span></code></pre></div></td></tr></table></div>
+<p>Now, we'll look at the definition of the run function.</p>
+<div class="language-python highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-47"> 47</a></span>
+<span class="normal"><a href="#__codelineno-8-48"> 48</a></span>
+<span class="normal"><a href="#__codelineno-8-49"> 49</a></span>
+<span class="normal"><a href="#__codelineno-8-50"> 50</a></span>
+<span class="normal"><a href="#__codelineno-8-51"> 51</a></span>
+<span class="normal"><a href="#__codelineno-8-52"> 52</a></span>
+<span class="normal"><a href="#__codelineno-8-53"> 53</a></span>
+<span class="normal"><a href="#__codelineno-8-54"> 54</a></span>
+<span class="normal"><a href="#__codelineno-8-55"> 55</a></span>
+<span class="normal"><a href="#__codelineno-8-56"> 56</a></span>
+<span class="normal"><a href="#__codelineno-8-57"> 57</a></span>
+<span class="normal"><a href="#__codelineno-8-58"> 58</a></span>
+<span class="normal"><a href="#__codelineno-8-59"> 59</a></span>
+<span class="normal"><a href="#__codelineno-8-60"> 60</a></span>
+<span class="normal"><a href="#__codelineno-8-61"> 61</a></span>
+<span class="normal"><a href="#__codelineno-8-62"> 62</a></span>
+<span class="normal"><a href="#__codelineno-8-63"> 63</a></span>
+<span class="normal"><a href="#__codelineno-8-64"> 64</a></span>
+<span class="normal"><a href="#__codelineno-8-65"> 65</a></span>
+<span class="normal"><a href="#__codelineno-8-66"> 66</a></span>
+<span class="normal"><a href="#__codelineno-8-67"> 67</a></span>
+<span class="normal"><a href="#__codelineno-8-68"> 68</a></span>
+<span class="normal"><a href="#__codelineno-8-69"> 69</a></span>
+<span class="normal"><a href="#__codelineno-8-70"> 70</a></span>
+<span class="normal"><a href="#__codelineno-8-71"> 71</a></span>
+<span class="normal"><a href="#__codelineno-8-72"> 72</a></span>
+<span class="normal"><a href="#__codelineno-8-73"> 73</a></span>
+<span class="normal"><a href="#__codelineno-8-74"> 74</a></span>
+<span class="normal"><a href="#__codelineno-8-75"> 75</a></span>
+<span class="normal"><a href="#__codelineno-8-76"> 76</a></span>
+<span class="normal"><a href="#__codelineno-8-77"> 77</a></span>
+<span class="normal"><a href="#__codelineno-8-78"> 78</a></span>
+<span class="normal"><a href="#__codelineno-8-79"> 79</a></span>
+<span class="normal"><a href="#__codelineno-8-80"> 80</a></span>
+<span class="normal"><a href="#__codelineno-8-81"> 81</a></span>
+<span class="normal"><a href="#__codelineno-8-82"> 82</a></span>
+<span class="normal"><a href="#__codelineno-8-83"> 83</a></span>
+<span class="normal"><a href="#__codelineno-8-84"> 84</a></span>
+<span class="normal"><a href="#__codelineno-8-85"> 85</a></span>
+<span class="normal"><a href="#__codelineno-8-86"> 86</a></span>
+<span class="normal"><a href="#__codelineno-8-87"> 87</a></span>
+<span class="normal"><a href="#__codelineno-8-88"> 88</a></span>
+<span class="normal"><a href="#__codelineno-8-89"> 89</a></span>
+<span class="normal"><a href="#__codelineno-8-90"> 90</a></span>
+<span class="normal"><a href="#__codelineno-8-91"> 91</a></span>
+<span class="normal"><a href="#__codelineno-8-92"> 92</a></span>
+<span class="normal"><a href="#__codelineno-8-93"> 93</a></span>
+<span class="normal"><a href="#__codelineno-8-94"> 94</a></span>
+<span class="normal"><a href="#__codelineno-8-95"> 95</a></span>
+<span class="normal"><a href="#__codelineno-8-96"> 96</a></span>
+<span class="normal"><a href="#__codelineno-8-97"> 97</a></span>
+<span class="normal"><a href="#__codelineno-8-98"> 98</a></span>
+<span class="normal"><a href="#__codelineno-8-99"> 99</a></span>
+<span class="normal"><a href="#__codelineno-8-100">100</a></span>
+<span class="normal"><a href="#__codelineno-8-101">101</a></span>
+<span class="normal"><a href="#__codelineno-8-102">102</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-8-47"><a id="__codelineno-8-47" name="__codelineno-8-47"></a><span class="k">def</span><span class="w"> </span><span class="nf">run</span><span class="p">(</span>
+</span><span id="__span-8-48"><a id="__codelineno-8-48" name="__codelineno-8-48"></a>    <span class="n">client_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+</span><span id="__span-8-49"><a id="__codelineno-8-49" name="__codelineno-8-49"></a>    <span class="n">eoy_month</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+</span><span id="__span-8-50"><a id="__codelineno-8-50" name="__codelineno-8-50"></a>    <span class="n">tenant_id</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+</span><span id="__span-8-51"><a id="__codelineno-8-51" name="__codelineno-8-51"></a>    <span class="n">client_id</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+</span><span id="__span-8-52"><a id="__codelineno-8-52" name="__codelineno-8-52"></a>    <span class="n">client_secret</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+</span><span id="__span-8-53"><a id="__codelineno-8-53" name="__codelineno-8-53"></a>    <span class="n">authority_host</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+</span><span id="__span-8-54"><a id="__codelineno-8-54" name="__codelineno-8-54"></a>    <span class="n">key_vault</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+</span><span id="__span-8-55"><a id="__codelineno-8-55" name="__codelineno-8-55"></a><span class="p">):</span>
+</span><span id="__span-8-56"><a id="__codelineno-8-56" name="__codelineno-8-56"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+</span><span id="__span-8-57"><a id="__codelineno-8-57" name="__codelineno-8-57"></a><span class="sd">    Configure and execute the job.</span>
+</span><span id="__span-8-58"><a id="__codelineno-8-58" name="__codelineno-8-58"></a><span class="sd">    &quot;&quot;&quot;</span>
+</span><span id="__span-8-59"><a id="__codelineno-8-59" name="__codelineno-8-59"></a>    <span class="k">try</span><span class="p">:</span>
+</span><span id="__span-8-60"><a id="__codelineno-8-60" name="__codelineno-8-60"></a>        <span class="c1"># Create the logger.</span>
+</span><span id="__span-8-61"><a id="__codelineno-8-61" name="__codelineno-8-61"></a>        <span class="n">logger</span> <span class="o">=</span> <span class="n">ClientLogger</span><span class="p">(</span>
+</span><span id="__span-8-62"><a id="__codelineno-8-62" name="__codelineno-8-62"></a>            <span class="n">client_name</span><span class="o">=</span><span class="n">client_name</span><span class="p">,</span>
+</span><span id="__span-8-63"><a id="__codelineno-8-63" name="__codelineno-8-63"></a>            <span class="n">file_name</span><span class="o">=</span><span class="n">MachineBackupDatabases</span><span class="o">.</span><span class="vm">__module__</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">)[</span><span class="mi">2</span><span class="p">],</span>
+</span><span id="__span-8-64"><a id="__codelineno-8-64" name="__codelineno-8-64"></a>        <span class="p">)</span>
+</span><span id="__span-8-65"><a id="__codelineno-8-65" name="__codelineno-8-65"></a>
+</span><span id="__span-8-66"><a id="__codelineno-8-66" name="__codelineno-8-66"></a>        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;***************&quot;</span><span class="p">)</span>
+</span><span id="__span-8-67"><a id="__codelineno-8-67" name="__codelineno-8-67"></a>
+</span><span id="__span-8-68"><a id="__codelineno-8-68" name="__codelineno-8-68"></a>        <span class="c1"># Get acces to the key vault containing the client config.</span>
+</span><span id="__span-8-69"><a id="__codelineno-8-69" name="__codelineno-8-69"></a>        <span class="n">KeyVault</span><span class="o">.</span><span class="n">logger</span> <span class="o">=</span> <span class="n">logger</span>
+</span><span id="__span-8-70"><a id="__codelineno-8-70" name="__codelineno-8-70"></a>        <span class="n">connection_model</span> <span class="o">=</span> <span class="n">ServicePrincipal</span><span class="p">(</span>
+</span><span id="__span-8-71"><a id="__codelineno-8-71" name="__codelineno-8-71"></a>            <span class="n">keyvault_host</span><span class="o">=</span><span class="n">key_vault</span><span class="p">,</span>
+</span><span id="__span-8-72"><a id="__codelineno-8-72" name="__codelineno-8-72"></a>            <span class="n">service_principal_id</span><span class="o">=</span><span class="n">client_id</span><span class="p">,</span>
+</span><span id="__span-8-73"><a id="__codelineno-8-73" name="__codelineno-8-73"></a>            <span class="n">client_secret</span><span class="o">=</span><span class="n">SecretStr</span><span class="p">(</span><span class="n">secret_value</span><span class="o">=</span><span class="n">encryption</span><span class="o">.</span><span class="n">decrypt</span><span class="p">(</span><span class="n">client_secret</span><span class="p">)),</span>
+</span><span id="__span-8-74"><a id="__codelineno-8-74" name="__codelineno-8-74"></a>            <span class="n">tenant_id</span><span class="o">=</span><span class="n">tenant_id</span><span class="p">,</span>
+</span><span id="__span-8-75"><a id="__codelineno-8-75" name="__codelineno-8-75"></a>            <span class="n">authority_host</span><span class="o">=</span><span class="n">authority_host</span><span class="p">,</span>
+</span><span id="__span-8-76"><a id="__codelineno-8-76" name="__codelineno-8-76"></a>        <span class="p">)</span>
+</span><span id="__span-8-77"><a id="__codelineno-8-77" name="__codelineno-8-77"></a>        <span class="n">key_vault_client</span> <span class="o">=</span> <span class="n">KeyVault</span><span class="p">()</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">connection_model</span><span class="o">=</span><span class="n">connection_model</span><span class="p">)</span>
+</span><span id="__span-8-78"><a id="__codelineno-8-78" name="__codelineno-8-78"></a>        <span class="n">backup_config</span> <span class="o">=</span> <span class="n">ClientConfig</span><span class="p">(</span><span class="n">logger</span><span class="p">,</span> <span class="n">key_vault_client</span><span class="p">)</span>
+</span><span id="__span-8-79"><a id="__codelineno-8-79" name="__codelineno-8-79"></a>
+</span><span id="__span-8-80"><a id="__codelineno-8-80" name="__codelineno-8-80"></a>        <span class="c1"># Bundle up the model the machine expects and create the machine.</span>
+</span><span id="__span-8-81"><a id="__codelineno-8-81" name="__codelineno-8-81"></a>        <span class="n">state</span> <span class="o">=</span> <span class="n">StateBackupDatabases</span><span class="p">(</span>
+</span><span id="__span-8-82"><a id="__codelineno-8-82" name="__codelineno-8-82"></a>            <span class="n">client_name</span><span class="o">=</span><span class="n">client_name</span><span class="p">,</span> <span class="n">backup_config</span><span class="o">=</span><span class="n">backup_config</span><span class="p">,</span> <span class="n">eoy_month</span><span class="o">=</span><span class="n">eoy_month</span>
+</span><span id="__span-8-83"><a id="__codelineno-8-83" name="__codelineno-8-83"></a>        <span class="p">)</span>
+</span><span id="__span-8-84"><a id="__codelineno-8-84" name="__codelineno-8-84"></a>        <span class="n">machine</span> <span class="o">=</span> <span class="n">MachineBackupDatabases</span><span class="p">(</span><span class="n">logger</span><span class="o">=</span><span class="n">logger</span><span class="p">,</span> <span class="n">state</span><span class="o">=</span><span class="n">state</span><span class="p">)</span>
+</span><span id="__span-8-85"><a id="__codelineno-8-85" name="__codelineno-8-85"></a>
+</span><span id="__span-8-86"><a id="__codelineno-8-86" name="__codelineno-8-86"></a>        <span class="c1"># Use the end-point that wraps the machine with auto-mounting/unmounting</span>
+</span><span id="__span-8-87"><a id="__codelineno-8-87" name="__codelineno-8-87"></a>        <span class="c1"># of the file share.</span>
+</span><span id="__span-8-88"><a id="__codelineno-8-88" name="__codelineno-8-88"></a>        <span class="n">end_point</span> <span class="o">=</span> <span class="n">DynamicMountingEndPoint</span><span class="p">(</span>
+</span><span id="__span-8-89"><a id="__codelineno-8-89" name="__codelineno-8-89"></a>            <span class="n">logger</span><span class="o">=</span><span class="n">logger</span><span class="p">,</span>
+</span><span id="__span-8-90"><a id="__codelineno-8-90" name="__codelineno-8-90"></a>            <span class="n">state_dynamic_mount</span><span class="o">=</span><span class="n">StateDynamicMount</span><span class="p">(</span>
+</span><span id="__span-8-91"><a id="__codelineno-8-91" name="__codelineno-8-91"></a>                <span class="n">client_name</span><span class="o">=</span><span class="n">client_name</span><span class="p">,</span>
+</span><span id="__span-8-92"><a id="__codelineno-8-92" name="__codelineno-8-92"></a>                <span class="n">backup_config</span><span class="o">=</span><span class="n">backup_config</span><span class="p">,</span>
+</span><span id="__span-8-93"><a id="__codelineno-8-93" name="__codelineno-8-93"></a>                <span class="n">machine_to_wrap</span><span class="o">=</span><span class="n">machine</span><span class="p">,</span>
+</span><span id="__span-8-94"><a id="__codelineno-8-94" name="__codelineno-8-94"></a>            <span class="p">),</span>
+</span><span id="__span-8-95"><a id="__codelineno-8-95" name="__codelineno-8-95"></a>        <span class="p">)</span>
+</span><span id="__span-8-96"><a id="__codelineno-8-96" name="__codelineno-8-96"></a>        <span class="n">end_point</span><span class="o">.</span><span class="n">execute</span><span class="p">()</span>
+</span><span id="__span-8-97"><a id="__codelineno-8-97" name="__codelineno-8-97"></a>
+</span><span id="__span-8-98"><a id="__codelineno-8-98" name="__codelineno-8-98"></a>    <span class="c1"># If anything goes wrong, dump the traceback to stdout and exit with a failure.</span>
+</span><span id="__span-8-99"><a id="__codelineno-8-99" name="__codelineno-8-99"></a>    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">exception</span><span class="p">:</span>
+</span><span id="__span-8-100"><a id="__codelineno-8-100" name="__codelineno-8-100"></a>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Critical failure: </span><span class="si">{</span><span class="n">exception</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span><span id="__span-8-101"><a id="__codelineno-8-101" name="__codelineno-8-101"></a>        <span class="nb">print</span><span class="p">(</span><span class="n">format_exc</span><span class="p">())</span>
+</span><span id="__span-8-102"><a id="__codelineno-8-102" name="__codelineno-8-102"></a>        <span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</span></code></pre></div></td></tr></table></div>
+<p>We wrap it in a try-block.  While there should be no unhadled exceptions in the End-Point or Service layers, if one does occur, we want to receive an alert.</p>
+<p>The first thing we are doing is setting up the logger.</p>
+<div class="language-python highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-61">61</a></span>
+<span class="normal"><a href="#__codelineno-9-62">62</a></span>
+<span class="normal"><a href="#__codelineno-9-63">63</a></span>
+<span class="normal"><a href="#__codelineno-9-64">64</a></span>
+<span class="normal"><a href="#__codelineno-9-65">65</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-9-61"><a id="__codelineno-9-61" name="__codelineno-9-61"></a>        <span class="c1"># Create the logger.</span>
+</span><span id="__span-9-62"><a id="__codelineno-9-62" name="__codelineno-9-62"></a>        <span class="n">logger</span> <span class="o">=</span> <span class="n">ClientLogger</span><span class="p">(</span>
+</span><span id="__span-9-63"><a id="__codelineno-9-63" name="__codelineno-9-63"></a>            <span class="n">client_name</span><span class="o">=</span><span class="n">client_name</span><span class="p">,</span>
+</span><span id="__span-9-64"><a id="__codelineno-9-64" name="__codelineno-9-64"></a>            <span class="n">file_name</span><span class="o">=</span><span class="n">MachineBackupDatabases</span><span class="o">.</span><span class="vm">__module__</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">)[</span><span class="mi">2</span><span class="p">],</span>
+</span><span id="__span-9-65"><a id="__codelineno-9-65" name="__codelineno-9-65"></a>        <span class="p">)</span>
+</span></code></pre></div></td></tr></table></div>
+<p>This is an atypical way of logging in Python.  Normally, the logger would just be exposed as a "global" variable within each module's definition, and Python's logging system is smart enough to disentangle the multiple definitions.  In this case, however, we wanted the logs to be organized as one directory per client--information that isn't available in the "global" module namespace, so we've built a little wrapper around the logging system to make sure logs are routed to the correct directory.</p>
+<p>The parameters for ClientLogger are:</p>
+<ul>
+<li>client_name is the name of the client directory the log file should appear in.</li>
+<li>file_name is the name of the log file.  MachineBackupDatabases.__module__.split(".")[2] is some introspective magic.  __module__ is a value every class has that identifies the full namespace path to the class.  For the MachineBackupDatabases class, the value would be "long_term_storage.services.backup.backup_databases.machine_backup_databases.MachineBackupDatabases".  The best name for the log file is the overall service name, which is the third element in the module name "backup".  So we split the string on "." and take the third element (lists are zero-indexed).</li>
+</ul>
+<p>The next thing we do is log a bunch of asterisks.  This is just an easily searchable string that means "start of run".</p>
+<p>Next, we're going to load information from the Azure Key Vault where the connection information and secrets needed to perform the backup live.  The information necessary to connect to this key vault was provided in the command line arguments.</p>
+<div class="language-python highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-68">68</a></span>
+<span class="normal"><a href="#__codelineno-10-69">69</a></span>
+<span class="normal"><a href="#__codelineno-10-70">70</a></span>
+<span class="normal"><a href="#__codelineno-10-71">71</a></span>
+<span class="normal"><a href="#__codelineno-10-72">72</a></span>
+<span class="normal"><a href="#__codelineno-10-73">73</a></span>
+<span class="normal"><a href="#__codelineno-10-74">74</a></span>
+<span class="normal"><a href="#__codelineno-10-75">75</a></span>
+<span class="normal"><a href="#__codelineno-10-76">76</a></span>
+<span class="normal"><a href="#__codelineno-10-77">77</a></span>
+<span class="normal"><a href="#__codelineno-10-78">78</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-10-68"><a id="__codelineno-10-68" name="__codelineno-10-68"></a>        <span class="c1"># Load connection config from key vault.</span>
+</span><span id="__span-10-69"><a id="__codelineno-10-69" name="__codelineno-10-69"></a>        <span class="n">connection_model</span> <span class="o">=</span> <span class="n">ServicePrincipal</span><span class="p">(</span>
+</span><span id="__span-10-70"><a id="__codelineno-10-70" name="__codelineno-10-70"></a>            <span class="n">keyvault_host</span><span class="o">=</span><span class="n">key_vault</span><span class="p">,</span>
+</span><span id="__span-10-71"><a id="__codelineno-10-71" name="__codelineno-10-71"></a>            <span class="n">service_principal_id</span><span class="o">=</span><span class="n">client_id</span><span class="p">,</span>
+</span><span id="__span-10-72"><a id="__codelineno-10-72" name="__codelineno-10-72"></a>            <span class="n">client_secret</span><span class="o">=</span><span class="n">SecretStr</span><span class="p">(</span><span class="n">secret_value</span><span class="o">=</span><span class="n">encryption</span><span class="o">.</span><span class="n">decrypt</span><span class="p">(</span><span class="n">client_secret</span><span class="p">)),</span>
+</span><span id="__span-10-73"><a id="__codelineno-10-73" name="__codelineno-10-73"></a>            <span class="n">tenant_id</span><span class="o">=</span><span class="n">tenant_id</span><span class="p">,</span>
+</span><span id="__span-10-74"><a id="__codelineno-10-74" name="__codelineno-10-74"></a>            <span class="n">authority_host</span><span class="o">=</span><span class="n">authority_host</span><span class="p">,</span>
+</span><span id="__span-10-75"><a id="__codelineno-10-75" name="__codelineno-10-75"></a>        <span class="p">)</span>
+</span><span id="__span-10-76"><a id="__codelineno-10-76" name="__codelineno-10-76"></a>        <span class="n">backup_config</span> <span class="o">=</span> <span class="n">BackupConfigModel</span><span class="o">.</span><span class="n">from_keyvault</span><span class="p">(</span>
+</span><span id="__span-10-77"><a id="__codelineno-10-77" name="__codelineno-10-77"></a>            <span class="n">logger</span><span class="o">=</span><span class="n">logger</span><span class="p">,</span> <span class="n">connection_model</span><span class="o">=</span><span class="n">connection_model</span>
+</span><span id="__span-10-78"><a id="__codelineno-10-78" name="__codelineno-10-78"></a>        <span class="p">)</span>
+</span></code></pre></div></td></tr></table></div>
+<p>Lines 69 through 75 are populating a data model that provides the information necessary for a Service Principal to access a key vault.</p>
+<p>The primary weirdness here is in populating client_secret.  The client_secret for the Service Principal is not a value we want to expose, but since it needs to be provided as a command line argument, and all command line arguments are visible in clear text while a process is running, the command line parameter containing the value had to be encrypted prior to submitting the job.  So, we have to decrypt that value.  The encryption.decrypt function provides the clear-text, decrypted value, but we still want masking rules to apply to it, so it has to be provided to the connection model as a SecretStr.</p>
+<p>Line 76 fetches the config information from the key vault.</p>
+<p>Next, we instantiate the state-machine that will do the work.</p>
+<div class="language-python highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-80">80</a></span>
+<span class="normal"><a href="#__codelineno-11-81">81</a></span>
+<span class="normal"><a href="#__codelineno-11-82">82</a></span>
+<span class="normal"><a href="#__codelineno-11-83">83</a></span>
+<span class="normal"><a href="#__codelineno-11-84">84</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-11-80"><a id="__codelineno-11-80" name="__codelineno-11-80"></a>        <span class="c1"># Bundle up the model the machine expects and create the machine.</span>
+</span><span id="__span-11-81"><a id="__codelineno-11-81" name="__codelineno-11-81"></a>        <span class="n">state</span> <span class="o">=</span> <span class="n">StateBackupDatabases</span><span class="p">(</span>
+</span><span id="__span-11-82"><a id="__codelineno-11-82" name="__codelineno-11-82"></a>            <span class="n">client_name</span><span class="o">=</span><span class="n">client_name</span><span class="p">,</span> <span class="n">backup_config</span><span class="o">=</span><span class="n">backup_config</span><span class="p">,</span> <span class="n">eoy_month</span><span class="o">=</span><span class="n">eoy_month</span>
+</span><span id="__span-11-83"><a id="__codelineno-11-83" name="__codelineno-11-83"></a>        <span class="p">)</span>
+</span><span id="__span-11-84"><a id="__codelineno-11-84" name="__codelineno-11-84"></a>        <span class="n">machine</span> <span class="o">=</span> <span class="n">MachineBackupDatabases</span><span class="p">(</span><span class="n">logger</span><span class="o">=</span><span class="n">logger</span><span class="p">,</span> <span class="n">state</span><span class="o">=</span><span class="n">state</span><span class="p">)</span>
+</span></code></pre></div></td></tr></table></div>
+<p>We build the state object, StateBackupDatabases, which contains:</p>
+<ul>
+<li>client_name is the name of the client being backed up.</li>
+<li>backup_config the config information from the key vault.</li>
+<li>eoy_month is a numeric value indicating which month is considered to be the client's end-of-year month.</li>
+</ul>
+<p>We then instantiate MachineBackupDatabases with the application logger and its defining state object.</p>
+<p>Next we instantiate an End-Point object.</p>
+<div class="language-python highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-86">86</a></span>
+<span class="normal"><a href="#__codelineno-12-87">87</a></span>
+<span class="normal"><a href="#__codelineno-12-88">88</a></span>
+<span class="normal"><a href="#__codelineno-12-89">89</a></span>
+<span class="normal"><a href="#__codelineno-12-90">90</a></span>
+<span class="normal"><a href="#__codelineno-12-91">91</a></span>
+<span class="normal"><a href="#__codelineno-12-92">92</a></span>
+<span class="normal"><a href="#__codelineno-12-93">93</a></span>
+<span class="normal"><a href="#__codelineno-12-94">94</a></span>
+<span class="normal"><a href="#__codelineno-12-95">95</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-12-86"><a id="__codelineno-12-86" name="__codelineno-12-86"></a>        <span class="c1"># Use the end-point that wraps the machine with auto-mounting/unmounting</span>
+</span><span id="__span-12-87"><a id="__codelineno-12-87" name="__codelineno-12-87"></a>        <span class="c1"># of the file share.</span>
+</span><span id="__span-12-88"><a id="__codelineno-12-88" name="__codelineno-12-88"></a>        <span class="n">end_point</span> <span class="o">=</span> <span class="n">DynamicMountingEndPoint</span><span class="p">(</span>
+</span><span id="__span-12-89"><a id="__codelineno-12-89" name="__codelineno-12-89"></a>            <span class="n">logger</span><span class="o">=</span><span class="n">logger</span><span class="p">,</span>
+</span><span id="__span-12-90"><a id="__codelineno-12-90" name="__codelineno-12-90"></a>            <span class="n">state_dynamic_mount</span><span class="o">=</span><span class="n">StateDynamicMount</span><span class="p">(</span>
+</span><span id="__span-12-91"><a id="__codelineno-12-91" name="__codelineno-12-91"></a>                <span class="n">client_name</span><span class="o">=</span><span class="n">client_name</span><span class="p">,</span>
+</span><span id="__span-12-92"><a id="__codelineno-12-92" name="__codelineno-12-92"></a>                <span class="n">backup_config</span><span class="o">=</span><span class="n">backup_config</span><span class="p">,</span>
+</span><span id="__span-12-93"><a id="__codelineno-12-93" name="__codelineno-12-93"></a>                <span class="n">machine_to_wrap</span><span class="o">=</span><span class="n">machine</span><span class="p">,</span>
+</span><span id="__span-12-94"><a id="__codelineno-12-94" name="__codelineno-12-94"></a>            <span class="p">),</span>
+</span><span id="__span-12-95"><a id="__codelineno-12-95" name="__codelineno-12-95"></a>        <span class="p">)</span>
+</span></code></pre></div></td></tr></table></div>
+<p>In this case, we are using dynamic mounting of the file-share, so we use the DynamicMountingEndPoint.  As parameters, it expects:</p>
+<ul>
+<li>logger is the application logger.</li>
+<li>state_dynamic_mount is a state object for MachineDynamicMount, which expects:<ul>
+<li>client_name is the name of the client being backed up.</li>
+<li>backup_config is the config information from the key vault.</li>
+<li>machine_to_wrap is the instance of the state-machine to execute inbetween mounting and unmounting of the file-share.</li>
+</ul>
+</li>
+</ul>
+<p>Finally, we execute the end-point which, in turn, will execute the service.</p>
+<div class="language-python highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-96">96</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-13-96"><a id="__codelineno-13-96" name="__codelineno-13-96"></a>        <span class="n">end_point</span><span class="o">.</span><span class="n">execute</span><span class="p">()</span>
+</span></code></pre></div></td></tr></table></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["content.footnote.tooltips"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.f1b6f286.min.js"></script>
+      
+    
+  </body>
+</html>
