@@ -4,12 +4,6 @@ use_directory_urls: false
 
 nav:
 - Introduction: index.md
-- Design:
-  - Sequence Diagrams:
-    - Backups: design/sequence_diagrams/backup.md
-    - Restore: design/sequence_diagrams/restore.md
-  # - Machine Diagrams:
-
 - Framework:
   - Layers: framework/layers.md
   - Navigating Object Orientation: framework/navigating_object_orientation.md
