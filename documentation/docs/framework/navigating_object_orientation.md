@@ -41,10 +41,10 @@ We can take a look at how this works by working our way backwards through an inh
 import os
 
 # repository imports
-from long_term_storage.repository.shell.delimited import SpaceDelimited
+from repository.shell.delimited import SpaceDelimited
 
 # application imports
-from long_term_storage.model.connection.postgresql import ServicePrincipal
+from model.connection.postgresql import ServicePrincipal
 
 # local imports
 from .command import Command
@@ -171,7 +171,7 @@ import subprocess
 
 # repository imports
 from state_machine import AbstractRepository
-from long_term_storage.repository.shell.delimited import SpaceDelimited
+from repository.shell.delimited import SpaceDelimited
 
 
 class Command(AbstractRepository):

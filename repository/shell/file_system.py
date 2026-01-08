@@ -2,7 +2,7 @@
 from pydantic import SecretStr
 
 # repository imports
-from long_term_storage.repository.shell.delimited import (
+from repository.shell.delimited import (
     CommaDelimited,
     EqualDelimited,
     SpaceDelimited,

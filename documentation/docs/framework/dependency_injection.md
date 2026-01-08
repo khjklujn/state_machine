@@ -21,9 +21,9 @@ Looking at an example:
 
 ```python linenums="1"
 # repository imports
-from long_term_storage.repository.file_manager import FileManager
-from long_term_storage.repository.gpg import Gpg
-from long_term_storage.repository.shell import PgDump, Tar
+from repository.file_manager import FileManager
+from repository.gpg import Gpg
+from repository.shell import PgDump, Tar
 
 # application imports
 from state_machine import BaseDependency
@@ -146,7 +146,7 @@ Tests the backup and encrypt cod flow.
 """
 
 # application import
-from long_term_storage.service.backup.backup_and_encrypt import (
+from service.backup.backup_and_encrypt import (
     machine_backup_and_encrypt,
     DependencyBackupAndEncrypt,
 )

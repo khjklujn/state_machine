@@ -5,8 +5,8 @@ import os
 from azure.identity import EnvironmentCredential
 
 # repository imports
-from long_term_storage.model.connection.postgresql import User
-from long_term_storage.repository.shell.delimited import SpaceDelimited
+from model.connection.postgresql import User
+from repository.shell.delimited import SpaceDelimited
 
 # local imports
 from .command import Command

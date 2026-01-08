@@ -2,10 +2,10 @@
 import os
 
 # repository imports
-from long_term_storage.repository.shell.delimited import SpaceDelimited
+from repository.shell.delimited import SpaceDelimited
 
 # application imports
-from long_term_storage.model.connection.postgresql import ServicePrincipal
+from model.connection.postgresql import ServicePrincipal
 
 # local imports
 from .command import Command

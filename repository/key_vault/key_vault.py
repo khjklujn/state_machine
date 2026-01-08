@@ -5,7 +5,7 @@ from datetime import datetime, UTC
 from azure.keyvault.secrets import SecretClient
 
 # application imports
-from long_term_storage.model.connection.key_vault import ServicePrincipal
+from model.connection.key_vault import ServicePrincipal
 from state_machine import AbstractRepository
 
 

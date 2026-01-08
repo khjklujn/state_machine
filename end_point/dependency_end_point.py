@@ -1,5 +1,5 @@
 # repository imports
-from long_term_storage.repository.process import Process
+from repository.process import Process
 
 # application imports
 from state_machine import BaseDependency

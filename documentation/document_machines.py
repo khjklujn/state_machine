@@ -10,28 +10,28 @@ sys.path.append("../long_term_storage")
 from graphviz import Digraph
 
 # application imports
-from long_term_storage.service.backup.backup_and_encrypt import MachineBackupAndEncrypt
-from long_term_storage.service.backup.backup_databases import MachineBackupDatabases
-from long_term_storage.service.create_client.create_client import (
+from service.backup.backup_and_encrypt import MachineBackupAndEncrypt
+from service.backup.backup_databases import MachineBackupDatabases
+from service.create_client.create_client import (
     MachineCreateClient,
 )
-from long_term_storage.service.create_client.validate import MachineValidate
-from long_term_storage.service.decrypt.decryption import (
+from service.create_client.validate import MachineValidate
+from service.decrypt.decryption import (
     MachineDecryption as DecryptMachineDecryption,
 )
-from long_term_storage.service.decrypt.validation import (
+from service.decrypt.validation import (
     MachineValidation as DecryptMachineValidation,
 )
-from long_term_storage.service.dynamic_mount import MachineDynamicMount
-from long_term_storage.service.restore.decryption import MachineDecryption
-from long_term_storage.service.restore.restoration import MachineRestoration
-from long_term_storage.service.restore.validation import MachineValidation
-from long_term_storage.service.retention_end_of_month.eom_delete import MachineEomDelete
-from long_term_storage.service.retention_end_of_month.eom_deletion_candidates import (
+from service.dynamic_mount import MachineDynamicMount
+from service.restore.decryption import MachineDecryption
+from service.restore.restoration import MachineRestoration
+from service.restore.validation import MachineValidation
+from service.retention_end_of_month.eom_delete import MachineEomDelete
+from service.retention_end_of_month.eom_deletion_candidates import (
     MachineEomDeletionCandidates,
 )
-from long_term_storage.service.retention_end_of_year.eoy_delete import MachineEoyDelete
-from long_term_storage.service.retention_end_of_year.eoy_deletion_candidates import (
+from service.retention_end_of_year.eoy_delete import MachineEoyDelete
+from service.retention_end_of_year.eoy_deletion_candidates import (
     MachineEoyDeletionCandidates,
 )
 from service.archive_encrypted.archive_encrypted_machine import (
