@@ -1,6 +1,6 @@
 # application imports
 from state_machine import Logger
-from long_term_storage.service.dynamic_mount import (
+from service.dynamic_mount import (
     MachineDynamicMount,
     StateDynamicMount,
 )

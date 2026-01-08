@@ -54,10 +54,10 @@ from datetime import datetime, UTC
 from pydantic import Field
 
 # repository imports
-from long_term_storage.repository.key_vault import BackupConfigModel
+from repository.key_vault import BackupConfigModel
 
 # application imports
-from long_term_storage.model.connection.key_vault import ServicePrincipal
+from model.connection.key_vault import ServicePrincipal
 from state_machine import BaseState
 
 
@@ -104,9 +104,9 @@ For the state-machine depicted above, the dependencies object is defined as:
 
 ```python linenums="1"
 # repository imports
-from long_term_storage.repository.file_manager import FileManager
-from long_term_storage.repository.gpg import Gpg
-from long_term_storage.repository.shell import PgDump, Tar
+from repository.file_manager import FileManager
+from repository.gpg import Gpg
+from repository.shell import PgDump, Tar
 
 # application imports
 from state_machine import BaseDependency
@@ -149,8 +149,8 @@ For the state-machine depicted above, the machine is defined as:
 
 ```python linenums="1"
 # application imports
-from long_term_storage.constant.path import Path
-from long_term_storage.model.connection.postgresql import ServicePrincipal
+from constant.path import Path
+from model.connection.postgresql import ServicePrincipal
 from state_machine.decorator import handle_exceptions, machine, node
 from state_machine import AbstractMachine, Transition
 

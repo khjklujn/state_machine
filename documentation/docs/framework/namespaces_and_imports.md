@@ -74,8 +74,8 @@ from datetime import datetime, UTC
 from joblib import delayed, Parallel
 
 # application imports
-from long_term_storage.constant.path import Path
-from long_term_storage.model import MasterConfigModel
+from constant.path import Path
+from model import MasterConfigModel
 from state_machine.config import Config
 from state_machine.decorator import (
     handle_exceptions,

@@ -5,7 +5,7 @@ from datetime import datetime, UTC
 from pydantic import SecretStr
 
 # repository imports
-from long_term_storage.repository.shell.delimited import SpaceDelimited
+from repository.shell.delimited import SpaceDelimited
 
 # local imports
 from .az import Az

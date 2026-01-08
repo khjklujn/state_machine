@@ -117,7 +117,7 @@ The second type of end-point is a DynamicMountingEndPoint.
 ```python linenums="1"
 # application imports
 from state_machine import Logger
-from long_term_storage.service.dynamic_mount import (
+from service.dynamic_mount import (
     MachineDynamicMount,
     StateDynamicMount,
 )
@@ -178,15 +178,15 @@ from traceback import format_exc
 from pydantic import SecretStr
 
 # application imports
-from long_term_storage.model.connection.key_vault import ServicePrincipal
+from model.connection.key_vault import ServicePrincipal
 from state_machine.config import encryption
-from long_term_storage.repository import ClientLogger
-from long_term_storage.repository.key_vault import BackupConfigModel
-from long_term_storage.end_point.dynamic_mounting_end_point import (
+from repository import ClientLogger
+from repository.key_vault import BackupConfigModel
+from end_point.dynamic_mounting_end_point import (
     DynamicMountingEndPoint,
     StateDynamicMount,
 )
-from long_term_storage.service.backup.backup_databases import (
+from service.backup.backup_databases import (
     MachineBackupDatabases,
     StateBackupDatabases,
 )
@@ -439,7 +439,7 @@ This is an atypical way of logging in Python.  Normally, the logger would just b
 The parameters for ClientLogger are:
 
 - client_name is the name of the client directory the log file should appear in.
-- file_name is the name of the log file.  MachineBackupDatabases.\_\_module\_\_.split(".")[2] is some introspective magic.  \_\_module\_\_ is a value every class has that identifies the full namespace path to the class.  For the MachineBackupDatabases class, the value would be "long_term_storage.services.backup.backup_databases.machine_backup_databases.MachineBackupDatabases".  The best name for the log file is the overall service name, which is the third element in the module name "backup".  So we split the string on "." and take the third element (lists are zero-indexed).
+- file_name is the name of the log file.  MachineBackupDatabases.\_\_module\_\_.split(".")[2] is some introspective magic.  \_\_module\_\_ is a value every class has that identifies the full namespace path to the class.  For the MachineBackupDatabases class, the value would be "services.backup.backup_databases.machine_backup_databases.MachineBackupDatabases".  The best name for the log file is the overall service name, which is the third element in the module name "backup".  So we split the string on "." and take the third element (lists are zero-indexed).
 
 The next thing we do is log a bunch of asterisks.  This is just an easily searchable string that means "start of run".
 

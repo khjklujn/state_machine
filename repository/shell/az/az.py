@@ -5,7 +5,7 @@ from typing import Any, Optional
 
 
 # repository imports
-from long_term_storage.repository.shell.delimited import SpaceDelimited
+from repository.shell.delimited import SpaceDelimited
 
 # local import
 from ..command import Command

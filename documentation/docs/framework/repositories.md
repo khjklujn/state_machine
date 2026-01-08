@@ -16,7 +16,7 @@ import os
 import subprocess
 
 # application imports
-from long_term_storage.repository.shell.delimited import SpaceDelimited
+from repository.shell.delimited import SpaceDelimited
 
 # local imports
 from .command import Command
@@ -69,7 +69,7 @@ import subprocess
 
 # repository imports
 from state_machine import AbstractRepository
-from long_term_storage.repository.shell.delimited import SpaceDelimited
+from repository.shell.delimited import SpaceDelimited
 
 
 class Command(AbstractRepository):

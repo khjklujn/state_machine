@@ -6,7 +6,7 @@ from azure.keyvault.secrets import SecretClient
 from pydantic import SecretStr
 
 # application imports
-from long_term_storage.constant import backup_config
+from constant import backup_config
 from state_machine import AbstractRepository, Logger
 
 

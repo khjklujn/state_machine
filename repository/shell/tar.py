@@ -1,5 +1,5 @@
 # application imports
-from long_term_storage.repository.shell.delimited import SpaceDelimited
+from repository.shell.delimited import SpaceDelimited
 
 # local imports
 from .command import Command

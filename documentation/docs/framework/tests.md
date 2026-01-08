@@ -56,7 +56,7 @@ The Service layer tests may contain two convience functions:
 
 ```python linenums="1"
 # application imports
-from long_term_storage.service.backup.backup_databases import (
+from service.backup.backup_databases import (
     MachineBackupDatabases,
     StateBackupDatabases,
 )
@@ -89,11 +89,11 @@ Logger is a mocked to not produce any output. BackupConfigModel is mocked to pro
 
 ```python linenums="1"
 # to be mocked
-from long_term_storage.service.backup.backup_and_encrypt import MachineBackupAndEncrypt
-from long_term_storage.service.retention_end_of_month.eom_deletion_candidates import (
+from service.backup.backup_and_encrypt import MachineBackupAndEncrypt
+from service.retention_end_of_month.eom_deletion_candidates import (
     MachineEomDeletionCandidates,
 )
-from long_term_storage.service.retention_end_of_year.eoy_deletion_candidates import (
+from service.retention_end_of_year.eoy_deletion_candidates import (
     MachineEoyDeletionCandidates,
 )
 from state_machine import Success
@@ -148,7 +148,7 @@ Test the discovery of databases to be backed up.
 from pprint import pprint
 
 # application import
-from long_term_storage.service.backup.backup_databases import (
+from service.backup.backup_databases import (
     machine_backup_databases,
     DependencyBackupDatabases,
 )
